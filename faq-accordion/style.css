@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cl-white: hsl(0, 0%, 100%);
+  --cl-pink: hsl(275, 100%, 97%);
+  --cl-light-purple: hsl(292, 16%, 49%);
+  --cl-dark-purple: hsl(292, 42%, 14%);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  height: 100svh;
+  position: relative;
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--cl-pink);
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 70%;
+  padding-inline: 2rem;
+  border-radius: 15px;
+  background-color: var(--cl-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.title {
+  border: 1px solid red;
+  width: 100%;
+  display: flex;
+}
+
+.star-icon {
+  width: 2.5cqi;
+}
+
+.icon {
+  width: 1.75cqi;
+}
+
+h1 {
+  font-size: 3.5cqi;
+  margin-left: 1.25rem;
+  color: var(--cl-dark-purple);
+}
+
+h2 {
+  font-size: 1.15cqi;
+  color: var(--cl-dark-purple);
+}
+
+.accordion {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+p {
+  grid-column: 1/-1;
+  line-height: 1.5;
+  font-size: 1cqi;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
