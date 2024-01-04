@@ -32,7 +32,12 @@ body {
 
 .background {
   width: 100%;
-  min-height: fit-content;
+  height: 40svh;
+  background-image: url(assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: fixed;
+  top: 0;
 }
 
 .wrapper {
@@ -41,8 +46,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 38%;
-  max-height: 70%;
+  /* width: 40%;
+  max-height: 70%; */
+  width: 35rem;
+  min-height: 70vh;
   padding: 2rem 2.5rem;
   border-radius: 15px;
   background-color: var(--cl-white);
@@ -64,22 +71,22 @@ body {
 }
 
 .star-icon {
-  width: 2.5cqi;
+  width: 2.5cqw;
 }
 
 .icon {
-  width: 1.75cqi;
+  width: 1.75cqw;
   cursor: pointer;
 }
 
 h1 {
-  font-size: 3.5cqi;
+  font-size: 3.5cqw;
   margin-left: 1.25rem;
   color: var(--cl-dark-purple);
 }
 
 h2 {
-  font-size: 1.15cqi;
+  font-size: 1.15cqw;
   color: var(--cl-dark-purple);
   cursor: pointer;
 }
@@ -105,7 +112,7 @@ h2:hover {
 
 p {
   line-height: 1.5;
-  font-size: 1cqi;
+  font-size: 1cqw;
   color: var(--cl-light-purple);
 }
 
