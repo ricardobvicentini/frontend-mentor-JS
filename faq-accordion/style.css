@@ -56,11 +56,12 @@ body {
   box-shadow: 0 15px 50px 20px var(--cl-shadow);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+  gap: 2rem;
 }
 
-.wrapper > :not(:first-child, :last-child) {
+.questions > :not(:last-child) {
   border-bottom: 1px solid var(--cl-pink);
 }
 
