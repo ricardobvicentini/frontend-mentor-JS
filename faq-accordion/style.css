@@ -19,7 +19,7 @@
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   display: block;
 }
 
@@ -30,15 +30,20 @@ body {
   background-color: var(--cl-pink);
 }
 
+.background {
+  width: 100%;
+  min-height: fit-content;
+}
+
 .wrapper {
   --cl-shadow: hsla(293, 16%, 49%, 0.233);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 45%;
-  height: 70%;
-  padding-inline: 2.5rem;
+  width: 38%;
+  max-height: 70%;
+  padding: 2rem 2.5rem;
   border-radius: 15px;
   background-color: var(--cl-white);
   box-shadow: 0 15px 50px 20px var(--cl-shadow);
@@ -64,6 +69,7 @@ body {
 
 .icon {
   width: 1.75cqi;
+  cursor: pointer;
 }
 
 h1 {
@@ -83,18 +89,28 @@ h2:hover {
 }
 
 .accordion {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  row-gap: 1rem;
+  border: 1px solid red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block: 1rem;
+  gap: 1rem;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 p {
-  grid-column: 1/-1;
   line-height: 1.5;
   font-size: 1cqi;
   color: var(--cl-light-purple);
-  padding-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .attribution {
@@ -102,7 +118,7 @@ p {
   bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 11px;
+  font-size: 1cqi;
   text-align: center;
 }
 
