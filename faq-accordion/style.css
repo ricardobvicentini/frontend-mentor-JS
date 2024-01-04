@@ -56,9 +56,8 @@ body {
   box-shadow: 0 15px 50px 20px var(--cl-shadow);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.25rem;
 }
 
 .wrapper > :not(:first-child, :last-child) {
@@ -68,25 +67,26 @@ body {
 .title {
   width: 100%;
   display: flex;
+  padding-block: 1rem;
 }
 
 .star-icon {
-  width: 2.5cqw;
+  width: 2rem;
 }
 
 .icon {
-  width: 1.75cqw;
+  width: 1.75rem;
   cursor: pointer;
 }
 
 h1 {
-  font-size: 3.5cqw;
+  font-size: 2.75rem;
   margin-left: 1.25rem;
   color: var(--cl-dark-purple);
 }
 
 h2 {
-  font-size: 1.15cqw;
+  font-size: 1rem;
   color: var(--cl-dark-purple);
   cursor: pointer;
 }
@@ -96,11 +96,10 @@ h2:hover {
 }
 
 .accordion {
-  border: 1px solid red;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-block: 1rem;
+  padding-block: 2rem;
   gap: 1rem;
 }
 
@@ -108,11 +107,12 @@ h2:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 5%;
 }
 
 p {
   line-height: 1.5;
-  font-size: 1cqw;
+  font-size: 0.9rem;
   color: var(--cl-light-purple);
 }
 
@@ -121,14 +121,61 @@ p {
 }
 
 .attribution {
+  width: 100%;
   position: fixed;
   bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1cqi;
+  font-size: 0.7rem;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (width < 730px) {
+  .background {
+    height: 30svh;
+  }
+
+  .wrapper {
+    width: 80vw;
+    min-height: 70vh;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .star-icon {
+    width: 1.5rem;
+  }
+
+  .icon {
+    width: 1.75rem;
+    cursor: pointer;
+  }
+
+  .title {
+    padding-block: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .accordion {
+    padding-block: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .attribution {
+    font-size: 0.5rem;
+  }
 }
