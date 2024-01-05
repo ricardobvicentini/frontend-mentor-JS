@@ -33,15 +33,15 @@
           <div class="accordion-title">
             <h2>What is Frontend Mentor, and how will it help me?</h2>
             <img
-              class="icon plus"
+              class="icon"
               src="assets/images/icon-plus.svg"
               alt="Plus icon"
             />
-            <!-- <img
-              class="icon minus"
+            <img
+              class="icon hidden"
               src="assets/images/icon-minus.svg"
               alt="Minus icon"
-            /> -->
+            />
           </div>
           <p class="text hidden">
             Frontend Mentor offers realistic coding challenges to help
@@ -112,7 +112,12 @@
 
       icons.forEach((el) => {
         el.addEventListener('click', (e) => {
-          console.log(el.parentElement);
+          const par = el.closest('.accordion').lastElementChild;
+          par.classList.toggle('hidden');
+          el.classList.toggle('hidden');
+          el.previousElementSibling.classList.remove('hidden');
+          if (el.nextElementSibling)
+            el.nextElementSibling.classList.remove('hidden');
         });
       });
     </script>
