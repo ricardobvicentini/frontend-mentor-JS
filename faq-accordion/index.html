@@ -109,15 +109,23 @@
 
     <script>
       const icons = document.querySelectorAll('.icon');
+      const pars = document.querySelectorAll('.text');
 
-      icons.forEach((el) => {
-        el.addEventListener('click', (e) => {
-          const par = el.closest('.accordion').lastElementChild;
+      icons.forEach((icon) => {
+        icon.addEventListener('click', (e) => {
+          const nextPar = icon.closest('.accordion').lastElementChild;
+          nextPar.classList.toggle('hidden');
+          pars.forEach((par) => {
+            if (par !== nextPar) {
+              par.classList.add('hidden');
+            }
+          });
+          /* const par = icon.closest('.accordion').lastElementChild;
           par.classList.toggle('hidden');
-          /*    el.classList.toggle('hidden');
-          el.previousElementSibling.classList.remove('hidden');
-          if (el.nextElementSibling)
-            el.nextElementSibling.classList.remove('hidden'); */
+             icon.classList.toggle('hidden');
+          icon.previousElementSibling.classList.remove('hidden');
+          if (icon.nextElementSibling)
+            icon.nextElementSibling.classList.remove('hidden'); */
         });
       });
     </script>
