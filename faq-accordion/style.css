@@ -79,9 +79,13 @@ body {
 }
 
 .icons {
-  border: 1px solid red;
   width: 1.75rem;
   cursor: pointer;
+}
+
+.icons:focus-visible {
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 h1 {

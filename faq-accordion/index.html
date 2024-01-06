@@ -34,12 +34,12 @@
             <h2>What is Frontend Mentor, and how will it help me?</h2>
             <div class="icons">
               <img
-                class="icon"
+                class="icon 1"
                 src="assets/images/icon-plus.svg"
                 alt="Plus icon"
               />
               <img
-                class="icon hidden"
+                class="icon 1 hidden"
                 src="assets/images/icon-minus.svg"
                 alt="Minus icon"
               />
@@ -57,12 +57,12 @@
             <h2>Is Frontend Mentor free?</h2>
             <div class="icons">
               <img
-                class="icon"
+                class="icon 2"
                 src="assets/images/icon-plus.svg"
                 alt="Plus icon"
               />
               <img
-                class="icon hidden"
+                class="icon 2 hidden"
                 src="assets/images/icon-minus.svg"
                 alt="Minus icon"
               />
@@ -79,12 +79,12 @@
             <h2>Can I use Frontend Mentor projects in my portfolio?</h2>
             <div class="icons">
               <img
-                class="icon"
+                class="icon 3"
                 src="assets/images/icon-plus.svg"
                 alt="Plus icon"
               />
               <img
-                class="icon hidden"
+                class="icon 3 hidden"
                 src="assets/images/icon-minus.svg"
                 alt="Minus icon"
               />
@@ -101,12 +101,12 @@
             <h2>How can I get help if I'm stuck on a challenge?</h2>
             <div class="icons">
               <img
-                class="icon"
+                class="icon 4"
                 src="assets/images/icon-plus.svg"
                 alt="Plus icon"
               />
               <img
-                class="icon hidden"
+                class="icon 4 hidden"
                 src="assets/images/icon-minus.svg"
                 alt="Minus icon"
               />
@@ -136,20 +136,19 @@
 
       icons.forEach((icon) => {
         icon.addEventListener('click', (e) => {
-          console.log(e.target);
           icon.children[0].classList.toggle('hidden');
           icon.children[1].classList.toggle('hidden');
+          for (let i = 0; i < icons.length; i++) {
+            if (e.currentTarget !== icons[i]) {
+              icons[i].children[0].classList.remove('hidden');
+              icons[i].children[1].classList.add('hidden');
+            }
+          }
           const nextPar = icon.closest('.accordion').lastElementChild;
           nextPar.classList.toggle('hidden');
           pars.forEach((par) => {
             if (par !== nextPar) par.classList.add('hidden');
           });
-          /* const par = icon.closest('.accordion').lastElementChild;
-          par.classList.toggle('hidden');
-             icon.classList.toggle('hidden');
-          icon.previousElementSibling.classList.remove('hidden');
-          if (icon.nextElementSibling)
-            icon.nextElementSibling.classList.remove('hidden'); */
         });
       });
     </script>
