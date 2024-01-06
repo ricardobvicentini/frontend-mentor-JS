@@ -78,7 +78,8 @@ body {
   width: 2rem;
 }
 
-.icon {
+.icons {
+  border: 1px solid red;
   width: 1.75rem;
   cursor: pointer;
 }
