@@ -30,7 +30,31 @@ body {
   place-items: center;
 }
 
+.container {
+  border: 1px solid red;
+  max-width: 60%;
+  height: 30%;
+  display: flex;
+  border-radius: 10px;
+}
+
+.image {
+  width: 35%;
+  background-image: url(images/drawers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  width: 65%;
+  padding: 2rem;
+}
+
 .attribution {
+  border: 1px solid red;
+  width: 100%;
+  position: fixed;
+  bottom: 5%;
   font-size: 11px;
   text-align: center;
 }
