@@ -31,15 +31,16 @@ body {
 }
 
 .container {
-  border: 1px solid red;
   max-width: 60%;
   height: 30%;
   display: flex;
   border-radius: 10px;
+  overflow: clip;
 }
 
 .image {
   width: 35%;
+  background-color: #fff;
   background-image: url(images/drawers.jpg);
   background-size: cover;
   background-repeat: no-repeat;
