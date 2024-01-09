@@ -6,6 +6,7 @@
   --cl-dark-blue: hsl(214, 17%, 51%);
   --cl-blue: hsl(212, 23%, 69%);
   --cl-light-blue: hsl(210, 46%, 95%);
+  --cl-shadow: hsla(214, 17%, 51%, 0.205);
 }
 
 *,
@@ -37,14 +38,14 @@ body {
 }
 
 .container {
-  --cl-shadow: hsla(214, 17%, 51%, 0.205);
+  position: relative;
   max-width: 60%;
   min-height: 35%;
   background-color: #fff;
   display: flex;
   border-radius: 10px;
   box-shadow: 0 10px 35px 10px var(--cl-shadow);
-  overflow: clip;
+  /* overflow-y: clip; */
 }
 
 .image {
@@ -53,6 +54,8 @@ body {
   background-image: url(images/drawers.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .content {
@@ -96,7 +99,6 @@ p {
 }
 
 .icon-share-wrapper {
-  /* position: relative; */
   background-color: var(--cl-light-blue);
   width: 2.5cqw;
   height: 2.5cqi;
@@ -108,21 +110,19 @@ p {
 
 .share-wrapper {
   position: absolute;
-  top: -120%;
-  right: -15%;
+  top: -160%;
+  right: -23%;
   background-color: var(--cl-dark-gray-blue);
+  box-shadow: 0 10px 35px 10px var(--cl-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10%;
-  padding: 1rem 3rem;
+  padding: 1.25rem 3.5rem;
   border-radius: 10px;
-  z-index: 3;
-  p {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-  }
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
 }
 
 .attribution {
