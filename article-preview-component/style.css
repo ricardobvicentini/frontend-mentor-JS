@@ -125,6 +125,17 @@ p {
   letter-spacing: 0.5rem;
 }
 
+.share-wrapper::before {
+  content: '';
+  position: absolute;
+  background-color: var(--cl-dark-gray-blue);
+  width: 15%;
+  height: 40%;
+  top: 99%;
+  border-bottom-left-radius: 200%;
+  border-bottom-right-radius: 200%;
+}
+
 .attribution {
   width: 100%;
   position: fixed;
