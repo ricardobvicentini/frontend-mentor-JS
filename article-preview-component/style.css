@@ -78,6 +78,8 @@ p {
 }
 
 .wrapper-contact {
+  border: 1px solid red;
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -94,6 +96,7 @@ p {
 }
 
 .icon-share-wrapper {
+  /* position: relative; */
   background-color: var(--cl-light-blue);
   width: 2.5cqw;
   height: 2.5cqi;
@@ -101,6 +104,25 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.share-wrapper {
+  position: absolute;
+  top: -120%;
+  right: -15%;
+  background-color: var(--cl-dark-gray-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  z-index: 3;
+  p {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+  }
 }
 
 .attribution {
