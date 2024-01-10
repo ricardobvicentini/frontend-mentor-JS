@@ -55,17 +55,16 @@ body {
 
 .content {
   width: 60%;
-  padding: 4%;
+  padding: 2% 4%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 1.25rem;
 }
 
 h1 {
   font-size: 1.5rem;
   color: var(--cl-dark-gray-blue);
-  margin-bottom: 1.25rem;
 }
 
 p {
@@ -95,8 +94,10 @@ p {
 
 .icon-share-wrapper {
   background-color: var(--cl-light-blue);
-  width: 2.5cqw;
-  height: 2.5cqi;
+  /* width: 2.5cqw;
+  height: 2.5cqi; */
+  width: 2.25rem;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   display: flex;
   justify-content: center;
