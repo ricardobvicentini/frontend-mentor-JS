@@ -104,6 +104,14 @@ p {
   align-items: center;
 }
 
+.icon-share-wrapper:hover,
+.icon-share-wrapper:focus {
+  background-color: var(--cl-dark-gray-blue);
+  .icon-share {
+    color: var(--cl-light-blue);
+  }
+}
+
 .share-wrapper {
   position: absolute;
   top: -11em;
