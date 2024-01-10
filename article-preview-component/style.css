@@ -105,8 +105,8 @@ p {
 
 .share-wrapper {
   position: absolute;
-  top: -5.5rem;
-  right: -7.25rem;
+  top: -11em;
+  right: -14.25em;
   background-color: var(--cl-dark-gray-blue);
   box-shadow: 0 10px 35px 10px var(--cl-shadow);
   display: flex;
