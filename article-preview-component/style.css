@@ -108,8 +108,8 @@ p {
 .icon-share-wrapper:focus {
   background-color: var(--cl-dark-gray-blue);
   .icon-share {
-    filter: invert(12%) sepia(83%) saturate(5841%) hue-rotate(244deg)
-      brightness(87%) contrast(153%);
+    filter: brightness(0) saturate(100%) invert(95%) sepia(2%) saturate(2660%)
+      hue-rotate(188deg) brightness(103%) contrast(94%);
   }
 }
 
