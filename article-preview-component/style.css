@@ -102,6 +102,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 200ms ease-in-out;
 }
 
 .icon-share-wrapper:hover,
