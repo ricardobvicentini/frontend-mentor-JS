@@ -108,7 +108,7 @@ p {
 .icon-share-wrapper:focus {
   background-color: var(--cl-dark-gray-blue);
   .icon-share {
-    color: var(--cl-light-blue);
+    color: #fff;
   }
 }
 
@@ -135,7 +135,7 @@ p {
   background-color: var(--cl-dark-gray-blue);
   width: 10%;
   aspect-ratio: 1/1;
-  top: 80%;
+  top: 75%;
   transform: rotate(45deg);
 }
 
