@@ -54,6 +54,22 @@
             <img src="images/icon-twitter.svg" alt="Twitter icon" />
             <img src="images/icon-pinterest.svg" alt="Pinterest icon" />
           </div>
+
+          <div class="share-wrapper-mobile absent">
+            <div class="share-wrapper-mobile-media">
+              <p>Share</p>
+              <img src="images/icon-facebook.svg" alt="Facebook icon" />
+              <img src="images/icon-twitter.svg" alt="Twitter icon" />
+              <img src="images/icon-pinterest.svg" alt="Pinterest icon" />
+            </div>
+            <div class="icon-share-wrapper">
+              <img
+                class="icon-share"
+                src="images/icon-share.svg"
+                alt="Icon share"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -68,11 +84,15 @@
     </div>
 
     <script>
-      const iconBtn = document.querySelector('.icon-share-wrapper');
+      const iconBtns = document.querySelectorAll('.icon-share-wrapper');
       const shareModal = document.querySelector('.share-wrapper');
+      const shareModalMobile = document.querySelector('.share-wrapper-mobile');
 
-      iconBtn.addEventListener('click', () => {
-        shareModal.classList.toggle('hidden');
+      iconBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          shareModal.classList.toggle('hidden');
+          shareModalMobile.classList.toggle('absent');
+        });
       });
     </script>
   </body>
