@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  max-width: 60%;
+  width: 60%;
   min-height: 40%;
   background-color: #fff;
   display: flex;
@@ -49,17 +49,21 @@ body {
   background-image: url(images/drawers.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px 0 0 10px;
 }
 
 .content {
   width: 60%;
-  padding: 2% 4%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-text {
+  height: 75%;
+  padding: 4% 8%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 1.25rem;
 }
 
 h1 {
@@ -77,19 +81,22 @@ p {
 
 .wrapper-contact {
   position: relative;
+  height: 25%;
+  padding-inline: 8%;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 3%;
   .avatar {
-    width: 3.5cqw;
-    height: 3.5cqi;
-    border-radius: 50%;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 100vw;
   }
 }
 
 .contact-info > * {
   font-size: 1rem;
+  padding-inline: 2%;
 }
 
 .icon-share-wrapper {
@@ -192,4 +199,46 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (width < 1000px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    height: 75%;
+  }
+
+  .image {
+    height: 40%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .content {
+    width: 100%;
+    height: 60%;
+    padding: 0 10%;
+    justify-content: space-evenly;
+    gap: 0;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  p,
+  .contact-info > * {
+    font-size: 0.875rem;
+  }
+
+  .avatar {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 100vw;
+  }
+
+  .attribution {
+    font-size: 8px;
+  }
 }
