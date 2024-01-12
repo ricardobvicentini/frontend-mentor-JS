@@ -102,6 +102,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   transition: background-color 200ms ease-in-out;
 }
 
@@ -129,6 +130,7 @@ p {
   font-size: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
 }
 
 .share-wrapper::before {
@@ -139,6 +141,11 @@ p {
   aspect-ratio: 1/1;
   top: 75%;
   transform: rotate(45deg);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50%);
 }
 
 .attribution {

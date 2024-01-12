@@ -46,7 +46,7 @@
               alt="Icon share"
             />
           </div>
-          <div class="share-wrapper">
+          <div class="share-wrapper hidden">
             <p>Share</p>
             <img src="images/icon-facebook.svg" alt="Facebook icon" />
             <img src="images/icon-twitter.svg" alt="Twitter icon" />
@@ -64,5 +64,14 @@
       <a href="https://github.com/ricardobvicentini">Ricardo Bruno Vicentini</a
       >.
     </div>
+
+    <script>
+      const iconBtn = document.querySelector('.icon-share-wrapper');
+      const shareModal = document.querySelector('.share-wrapper');
+
+      iconBtn.addEventListener('click', () => {
+        shareModal.classList.toggle('hidden');
+      });
+    </script>
   </body>
 </html>
