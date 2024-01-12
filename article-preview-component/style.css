@@ -130,7 +130,7 @@ p {
   font-size: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+  animation: slide-up 300ms ease-in-out forwards;
 }
 
 .share-wrapper::before {
@@ -143,9 +143,44 @@ p {
   transform: rotate(45deg);
 }
 
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-15%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 .hidden {
-  opacity: 0;
-  transform: translateY(50%);
+  /* display: none; */
+  animation: slide-down 300ms ease-in-out forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-15%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(50%);
+    display: none;
+  }
 }
 
 .attribution {
