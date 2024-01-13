@@ -295,7 +295,7 @@ p {
     transition: background-color 200ms ease-in-out;
   }
 
-  .absent {
+  .hidden-mobile {
     opacity: 0;
   }
 
