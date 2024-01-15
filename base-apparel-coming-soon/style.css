@@ -43,6 +43,15 @@ body {
   grid-row: 1 / -1;
 }
 
+footer {
+  border: 1px solid red;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
