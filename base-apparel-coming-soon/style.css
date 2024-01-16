@@ -109,10 +109,9 @@ body {
   width: 100%;
   height: 4cqw;
   padding-inline: 2cqi;
-  background: none;
+  background: transparent;
   border: 1px solid var(--cl-primary-red);
   border-radius: 100vw;
-  font-size: 400;
 }
 
 .input-wrapper > input::placeholder {
@@ -121,6 +120,11 @@ body {
   font-size: 1.25cqi;
   font-size: 600;
   color: var(--light-text);
+}
+
+.arrow {
+  height: 3rem;
+  width: 3rem;
 }
 
 footer {
