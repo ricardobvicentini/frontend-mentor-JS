@@ -103,6 +103,7 @@ body {
 }
 
 .input-wrapper {
+  border: 1px solid red;
   padding-top: 3cqw;
 }
 
