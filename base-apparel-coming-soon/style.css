@@ -24,16 +24,17 @@ img {
 }
 
 body {
-  width: 100vw;
+  /* width: 100vw;
   height: 100vh;
-  height: 100svh;
+  height: 100svh; */
   font-family: 'Josefin Sans', sans-serif;
 }
 
 .container {
   border: 1px solid red;
   width: 100%;
-  height: 95%;
+  height: 95vh;
+  height: 95svh;
   background-image: url(images/bg-pattern-desktop.svg);
 
   display: grid;
@@ -129,7 +130,8 @@ body {
 
 footer {
   width: 100%;
-  height: 5%;
+  height: 5vh;
+  height: 5svh;
   display: flex;
   justify-content: center;
   align-items: center;
