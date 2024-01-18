@@ -60,11 +60,11 @@ body {
 .text-wrapper,
 .input-wrapper {
   border: 1px solid red;
-  padding: 0 10cqi;
+  width: 62%;
+  margin-inline: auto;
 }
 
 .logo-wrapper {
-  padding-top: 5cqw;
 }
 
 .text-wrapper {
@@ -72,7 +72,6 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 5%;
-  height: 25rem;
   .title,
   .content {
     width: 100%;
@@ -104,7 +103,6 @@ body {
 
 .input-wrapper {
   border: 1px solid red;
-  padding-top: 3cqw;
 }
 
 .input-wrapper > input {
