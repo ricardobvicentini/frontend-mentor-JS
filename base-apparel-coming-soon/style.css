@@ -15,14 +15,14 @@
   --cl-primary-soft-red: hsl(0, 93%, 68%);
   --cl-grad-primary: linear-gradient(
     135deg,
-    from hsl(0, 80%, 86%),
-    to hsl(0, 74%, 74%)
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
   );
   --cl-neutral-grayish-red: hsl(0, 6%, 24%);
   --cl-grad-neutral: linear-gradient(
     135deg,
-    from hsl(0, 0%, 100%),
-    to hsl(0, 100%, 98%)
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
   );
 }
 
@@ -133,17 +133,18 @@ body {
 }
 
 .arrow {
+  --shadow: hsla(0, 36%, 70%, 0.603);
   position: absolute;
-  top: 0;
+  top: 0.5%;
   right: 0;
-  height: 4cqw;
+  height: 3.8cqw;
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100vw;
   background-image: var(--cl-grad-primary);
-  background-color: dodgerblue;
+  box-shadow: 0 10px 20px var(--shadow);
 }
 
 footer {
