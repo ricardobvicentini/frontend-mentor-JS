@@ -135,10 +135,10 @@ body {
 .arrow {
   --shadow: hsla(0, 36%, 70%, 0.603);
   position: absolute;
-  top: 0.5%;
+  top: 0%;
   right: 0;
-  height: 3.8cqw;
-  width: 20%;
+  height: 4cqw;
+  width: 22%;
   display: flex;
   justify-content: center;
   align-items: center;
