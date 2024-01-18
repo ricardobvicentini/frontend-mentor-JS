@@ -13,9 +13,17 @@
 :root {
   --cl-primary-red: hsl(0, 36%, 70%);
   --cl-primary-soft-red: hsl(0, 93%, 68%);
-  --cl-grad-primary: linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+  --cl-grad-primary: linear-gradient(
+    135deg,
+    from hsl(0, 80%, 86%),
+    to hsl(0, 74%, 74%)
+  );
   --cl-neutral-grayish-red: hsl(0, 6%, 24%);
-  --cl-grad-neutral: linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --cl-grad-neutral: linear-gradient(
+    135deg,
+    from hsl(0, 0%, 100%),
+    to hsl(0, 100%, 98%)
+  );
 }
 
 img {
@@ -36,7 +44,7 @@ body {
   height: 95vh;
   height: 95svh;
   background-image: url(images/bg-pattern-desktop.svg);
-
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: 1fr 45%;
   grid-template-rows: 1fr auto 1fr;
@@ -65,13 +73,14 @@ body {
 }
 
 .logo-wrapper {
+  padding-top: 4rem;
 }
 
 .text-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 5%;
+  height: 25rem;
   .title,
   .content {
     width: 100%;
@@ -102,6 +111,7 @@ body {
 }
 
 .input-wrapper {
+  position: relative;
   border: 1px solid red;
 }
 
@@ -123,8 +133,17 @@ body {
 }
 
 .arrow {
-  height: 3rem;
-  width: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 4cqw;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vw;
+  background-image: var(--cl-grad-primary);
+  background-color: dodgerblue;
 }
 
 footer {
