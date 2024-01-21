@@ -74,7 +74,10 @@ body {
 }
 
 .logo-wrapper {
-  padding-top: 4rem;
+  padding-top: 7cqh;
+  img {
+    height: 4cqh;
+  }
 }
 
 .text-wrapper {
@@ -166,8 +169,7 @@ body {
   top: 0;
   right: 27%;
   img {
-    width: 2cqi;
-    aspect-ratio: 1/1;
+    height: 3cqh;
   }
 }
 
