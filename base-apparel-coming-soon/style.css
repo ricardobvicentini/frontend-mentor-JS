@@ -48,7 +48,7 @@ body {
   background-size: contain;
   display: grid;
   grid-template-columns: 1fr 45%;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr 50% 1fr;
 }
 
 .image-wrapper {
@@ -81,9 +81,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: 4cqh;
   gap: 4cqh;
-  height: 25rem;
   .title,
   .content {
     width: 100%;
