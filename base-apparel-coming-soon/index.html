@@ -52,6 +52,21 @@
       const email = document.querySelector('#email')
       const errorIcon = document.querySelector('.error-wrapper')
       const errorMes = document.querySelector('.error-message')
+      const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+
+      btn.addEventListener('click', () => {
+        if (email.value === '' || !email.value.match(regex)) {
+          errorIcon.classList.remove('hidden')
+          errorMes.classList.remove('hidden')
+          email.style.borderColor = 'red' 
+          email.value = ''
+        } else {
+          errorIcon.classList.add('hidden')
+          errorMes.classList.add('hidden')
+          email.style.borderColor = 'var(--cl-primary-red)' 
+          email.value = ''
+        }
+      })
 
 
     </script>
