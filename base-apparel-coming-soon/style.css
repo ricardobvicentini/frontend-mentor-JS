@@ -124,7 +124,8 @@ body {
   width: 100%;
   height: 7cqh;
   margin-bottom: 1.25cqh;
-  padding-inline: 2cqi;
+  padding-left: 2cqi;
+  padding-right: 12cqi;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2cqh;
   font-weight: 600;
@@ -280,6 +281,8 @@ footer {
 
   .input-wrapper > input {
     height: 6cqh;
+    padding-left: 4cqi;
+    padding-right: 30cqi;
   }
 
   .input-wrapper > input::placeholder {
@@ -292,6 +295,10 @@ footer {
 
   .error-wrapper {
     height: 6cqh;
+  }
+
+  .error-message {
+    padding-inline: 4cqi;
   }
 }
 

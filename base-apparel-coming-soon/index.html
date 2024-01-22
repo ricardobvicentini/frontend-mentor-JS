@@ -61,13 +61,16 @@
           email.style.borderColor = 'red' 
           email.value = ''
         } else {
-          errorIcon.classList.add('hidden')
-          errorMes.classList.add('hidden')
-          email.style.borderColor = 'var(--cl-primary-red)' 
           email.value = ''
         }
       })
 
+      email.addEventListener('focus', () => {
+        errorIcon.classList.add('hidden')
+          errorMes.classList.add('hidden')
+          email.style.borderColor = 'var(--cl-primary-red)' 
+          email.value = ''
+      })
 
     </script>
   </body>
