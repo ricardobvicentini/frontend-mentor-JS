@@ -34,8 +34,8 @@
         <input id="email" type="text" placeholder="Email Address"><div class="arrow-wrapper">
           <img src="images/icon-arrow.svg" alt="Arrow icon" />
         </div></input>
-        <div class="error-wrapper"><img class="error-icon" src="images/icon-error.svg" alt="Error icon"></div> 
-       <p class="error-message">Please provide a valid email</p>
+        <div class="error-wrapper hidden"><img class="error-icon" src="images/icon-error.svg" alt="Error icon"></div> 
+       <p class="error-message hidden">Please provide a valid email</p>
       </div>
     </main>
     <footer>
@@ -46,5 +46,14 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
     </footer>
+
+    <script>
+      const btn = document.querySelector('.arrow-wrapper')
+      const email = document.querySelector('#email')
+      const errorIcon = document.querySelector('.error-wrapper')
+      const errorMes = document.querySelector('.error-message')
+
+
+    </script>
   </body>
 </html>
