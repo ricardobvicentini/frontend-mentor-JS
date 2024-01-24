@@ -17,3 +17,11 @@
   --cl-neutral-dark-blue: hsl(249, 10%, 26%);
   --cl-neutrak-grayish-blue: hsl(246, 25%, 77%);
 }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
