@@ -18,6 +18,24 @@
   --cl-neutrak-grayish-blue: hsl(246, 25%, 77%);
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cl-primary-red);
+  background-image: url(images/bg-intro-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  border: 1px solid red;
+  width: 100vw;
+  height: 95vh;
+  height: 95svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
