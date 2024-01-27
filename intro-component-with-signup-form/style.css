@@ -16,6 +16,9 @@
   --cl-accent-blue: hsl(248, 32%, 49%);
   --cl-neutral-dark-blue: hsl(249, 10%, 26%);
   --cl-neutral-grayish-blue: hsl(246, 25%, 77%);
+
+  --fs-primary: clamp(2.5rem, 4.5cqi, 3.5rem);
+  --fs-neutral: clamp(1rem, 1.2cqi, 1.2rem);
 }
 
 body {
@@ -48,14 +51,14 @@ main {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 4.5cqi, 3.5rem);
+  font-size: var(--fs-primary);
   line-height: 1.2;
   text-wrap: balance;
   margin-bottom: 3cqh;
 }
 
 p {
-  font-size: clamp(1rem, 1.5cqi, 1.2rem);
+  font-size: var(--fs-neutral);
   line-height: 1.8;
 }
 
@@ -72,11 +75,11 @@ p {
     border: none;
     background-color: var(--cl-accent-blue);
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(1rem, 1.5cqi, 1.2rem);
+    font-size: var(--fs-neutral);
     color: #f3f3f3;
     border: 1px solid transparent;
     border-radius: 10px;
-    padding: 4% 7%;
+    padding: 3% 7%;
     margin-bottom: 2rem;
     box-shadow: 0 10px 0 var(--shadow);
     span {
@@ -88,7 +91,7 @@ p {
 .input-wrapper {
   border: 1px solid red;
   width: 100%;
-  height: 70%;
+  height: 60%;
   padding: 8%;
   background-color: #fff;
   border-radius: 10px;
@@ -99,38 +102,38 @@ p {
   input {
     --cl-border: hsla(249, 10%, 26%, 0.445);
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(1rem, 1.5cqi, 1.2rem);
+    font-size: var(--fs-neutral);
     font-weight: 600;
     color: var(--cl-neutral-dark-blue);
     border: 1px solid var(--cl-border);
     border-radius: 5px;
-    padding: 4% 7%;
+    padding: 3% 7%;
   }
   input::placeholder {
     --cl-font: hsla(249, 10%, 26%, 0.603);
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(1rem, 1.5cqi, 1.2rem);
+    font-size: var(--fs-neutral);
     font-weight: 600;
     color: var(--cl-font);
   }
   .btn-2 {
     --cl-border: hsl(154, 61%, 41%);
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(1rem, 1.5cqi, 1.2rem);
+    font-size: var(--fs-neutral);
     font-weight: 600;
     text-transform: uppercase;
     background-color: var(--cl-primary-green);
     color: #f3f3f3;
     border: none;
     border-bottom: 3px solid hsl(154, 57%, 45%);
-    outline: 2px solid var(--cl-border);
+    outline: 1px solid var(--cl-border);
     border-radius: 5px;
-    padding: 4% 7%;
+    padding: 3% 7%;
   }
   p {
     margin-inline: 0;
     text-align: center;
-    font-size: clamp(0.8rem, 1cqi, 1rem);
+    font-size: clamp(0.7rem, 1cqi, 1rem);
     font-weight: 500;
     color: var(--cl-neutral-grayish-blue);
     span {
