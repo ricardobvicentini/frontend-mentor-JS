@@ -17,8 +17,8 @@
   --cl-neutral-dark-blue: hsl(249, 10%, 26%);
   --cl-neutral-grayish-blue: hsl(246, 25%, 77%);
 
-  --fs-primary: clamp(2.5rem, 4.5cqi, 3.5rem);
-  --fs-neutral: clamp(1rem, 1.2cqi, 1.2rem);
+  --fs-primary: clamp(1.5rem, 4.5cqi, 3.5rem);
+  --fs-neutral: clamp(0.75rem, 1.2cqi, 1.2rem);
 }
 
 body {
@@ -97,7 +97,7 @@ p {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 5%;
   input {
     --cl-border: hsla(249, 10%, 26%, 0.445);
@@ -133,7 +133,7 @@ p {
   p {
     margin-inline: 0;
     text-align: center;
-    font-size: clamp(0.7rem, 1cqi, 1rem);
+    font-size: clamp(0.5rem, 1cqi, 1rem);
     font-weight: 500;
     color: var(--cl-neutral-grayish-blue);
     span {
@@ -150,7 +150,7 @@ p {
   align-items: center;
   height: 5vh;
   height: 5svh;
-  font-size: clamp(0.8rem, 1cqi, 1rem);
+  font-size: clamp(0.5rem, 1cqi, 1rem);
   text-align: center;
 }
 .attribution a {
@@ -159,12 +159,37 @@ p {
 
 @container body-container (max-width: 900px) {
   main {
+    width: 90vw;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 0;
   }
 }
 
 @container main-container (max-width: 900px) {
   .hero-wrapper {
     width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    justify-content: space-between;
+    .btn-1 {
+      width: fit-content;
+      height: 15%;
+      margin-bottom: 0;
+      padding: 0 25%;
+    }
+  }
+
+  .input-wrapper {
+    height: 80%;
   }
 }
