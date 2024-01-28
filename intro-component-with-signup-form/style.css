@@ -17,7 +17,7 @@
   --cl-neutral-dark-blue: hsl(249, 10%, 26%);
   --cl-neutral-grayish-blue: hsl(246, 25%, 77%);
 
-  --fs-primary: clamp(2rem, 4.5cqi, 3.5rem);
+  --fs-primary: clamp(2.5rem, 5cqi, 3.5rem);
   --fs-neutral: clamp(1rem, 1.5cqi, 1.2rem);
 }
 
