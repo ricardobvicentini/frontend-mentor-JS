@@ -17,8 +17,8 @@
   --cl-neutral-dark-blue: hsl(249, 10%, 26%);
   --cl-neutral-grayish-blue: hsl(246, 25%, 77%);
 
-  --fs-primary: clamp(1.5rem, 4.5cqi, 3.5rem);
-  --fs-neutral: clamp(0.75rem, 1.2cqi, 1.2rem);
+  --fs-primary: clamp(2rem, 4.5cqi, 3.5rem);
+  --fs-neutral: clamp(1rem, 1.5cqi, 1.2rem);
 }
 
 body {
@@ -69,8 +69,10 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   .btn-1 {
     --shadow: hsla(249, 10%, 26%, 0.205);
+    width: 100%;
     background: none;
     border: none;
     background-color: var(--cl-accent-blue);
@@ -79,7 +81,7 @@ p {
     color: #f3f3f3;
     border: 1px solid transparent;
     border-radius: 10px;
-    padding: 3% 7%;
+    padding: 1rem 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 10px 0 var(--shadow);
     span {
@@ -92,7 +94,7 @@ p {
   border: 1px solid red;
   width: 100%;
   height: 60%;
-  padding: 8%;
+  padding: 3rem;
   background-color: #fff;
   border-radius: 10px;
   display: flex;
@@ -107,7 +109,7 @@ p {
     color: var(--cl-neutral-dark-blue);
     border: 1px solid var(--cl-border);
     border-radius: 5px;
-    padding: 3% 7%;
+    padding: 1rem 2rem;
   }
   input::placeholder {
     --cl-font: hsla(249, 10%, 26%, 0.603);
@@ -128,7 +130,7 @@ p {
     border-bottom: 3px solid hsl(154, 57%, 45%);
     outline: 1px solid var(--cl-border);
     border-radius: 5px;
-    padding: 3% 7%;
+    padding: 1rem 2rem;
   }
   p {
     margin-inline: 0;
@@ -167,7 +169,7 @@ p {
     gap: 0;
   }
 }
-
+/* 
 @container main-container (max-width: 900px) {
   .hero-wrapper {
     width: 100%;
@@ -182,7 +184,6 @@ p {
     width: 100%;
     justify-content: space-between;
     .btn-1 {
-      width: fit-content;
       height: 15%;
       margin-bottom: 0;
       padding: 0 25%;
@@ -193,3 +194,4 @@ p {
     height: 80%;
   }
 }
+ */
