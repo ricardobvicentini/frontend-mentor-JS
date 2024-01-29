@@ -18,7 +18,7 @@
   --cl-neutral-grayish-blue: hsl(246, 25%, 77%);
 
   --fs-primary: clamp(2rem, 5cqi, 3.5rem);
-  --fs-neutral: clamp(0.9rem, 1.5cqi, 1.2rem);
+  --fs-neutral: clamp(0.9rem, 1.75cqi, 1.2rem);
 }
 
 body {
@@ -185,10 +185,12 @@ p {
     height: 80%;
     .btn-1 {
       height: 15%;
+      padding: 0.5rem 4rem;
     }
   }
 
   .input-wrapper {
     height: 80%;
+    padding: 2rem;
   }
 }
