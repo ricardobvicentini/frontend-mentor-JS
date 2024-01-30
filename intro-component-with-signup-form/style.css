@@ -178,6 +178,10 @@ img {
   color: hsl(228, 45%, 44%);
 }
 
+.hidden {
+  display: none;
+}
+
 @container body-container (width < 900px) {
   main {
     width: 90vw;
