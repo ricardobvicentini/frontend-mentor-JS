@@ -36,7 +36,7 @@
             <img class="error-icon hidden" src="images/icon-error.svg" alt="">
             <p class="error-message hidden"><em>Last Name cannot be empty</em></p>
           </div>
-          <div class="pos-wrapper"><input class="input-field" type="email" placeholder="Email Address"></input> 
+          <div class="pos-wrapper"><input class="input-field input-email" type="email" placeholder="Email Address"></input> 
             <img class="error-icon hidden" src="images/icon-error.svg" alt="">
             <p class="error-message hidden"><em>Looks like this is not an email</em></p>
           </div>
@@ -65,36 +65,40 @@
     <script>
 
       const inputs = document.querySelectorAll('.input-field')
+      const email = document.querySelector('.input-email')
       const btn = document.querySelector('.btn-2')
 
       const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
 
-      inputs.forEach((input) => {
+      function focus(el, fSib, sSib) {
+        el.addEventListener('focus', () => {
+            fSib.classList.add('hidden')
+            sSib.classList.add('hidden')
+            el.style.borderColor = 'var(--cl-border)' 
+            el.value = ''
+      })
+    }
 
-
-
+      inputs.forEach((input) => {     
         btn.addEventListener('click', () => {
           const icon = input.nextElementSibling
           const msg = icon.nextElementSibling
-          input.addEventListener('focus', () => {
-            icon.classList.add('hidden')
-            msg.classList.add('hidden')
-            input.style.borderColor = 'var(--cl-border)' 
-            input.value = ''
-          })
           if (input.value === '') {
             input.style.borderColor = 'var(--cl-primary-red)'
             icon.classList.remove('hidden')
             msg.classList.remove('hidden')
-      
-          } else {
-            input.value = ''
+            focus(input, icon, msg)
+          }
+          if (!email.value.match(regex)) {
+            const eIcon = email.nextElementSibling
+            const eMsg = eIcon.nextElementSibling
+            email.style.borderColor = 'var(--cl-primary-red)'
+            eIcon.classList.remove('hidden')
+            eMsg.classList.remove('hidden')
+            focus(email, eIcon, eMsg)
           }
         })
-
       })
-
-
 
     </script>
   </body>
