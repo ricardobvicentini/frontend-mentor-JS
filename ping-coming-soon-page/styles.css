@@ -1,8 +1,33 @@
 @charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cl-primary-blue: hsl(223, 87%, 63%);
+  --cl-secondary-pale-blue: hsl(223, 100%, 88%);
+  --cl-secondary-light-red: hsl(354, 100%, 66%);
+  --cl-neutral-gray: hsl(0, 0%, 59%);
+  --cl-neutral-dark-blue: hsl(209, 33%, 12%);
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
