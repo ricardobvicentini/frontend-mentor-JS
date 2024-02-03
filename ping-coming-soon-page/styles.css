@@ -23,6 +23,8 @@ html {
 }
 
 body {
+  border: 1px solid red;
+  /* width: 100vw; */
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -56,6 +58,40 @@ header {
     font-weight: 400;
     margin-bottom: var(--mg-bottom);
   }
+}
+
+.info-btn {
+  border: 1px solid red;
+  margin-inline: auto;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  input {
+    width: 67%;
+    border: none;
+    border: 2px solid var(--cl-secondary-pale-blue);
+    border-radius: 100vw;
+    padding: 1rem 1.5rem;
+  }
+  button {
+    background-color: var(--cl-primary-blue);
+    width: 30%;
+    padding: 1rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #f3f3f3;
+    border: transparent;
+    border-radius: 100vw;
+    box-shadow: 0 10px 20px var(--cl-secondary-pale-blue);
+  }
+}
+input::placeholder {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.8rem;
+  color: var(--cl-secondary-pale-blue);
 }
 
 .image {
