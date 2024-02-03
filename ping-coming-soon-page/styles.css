@@ -67,7 +67,7 @@ header {
   text-align: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   input {
     width: 67%;
     border: none;
@@ -99,9 +99,34 @@ input::placeholder {
   margin-inline: auto;
   width: 50%;
   height: 40%;
+  margin-bottom: 1.5rem;
   img {
     width: 100%;
     height: auto;
+  }
+}
+
+.medias {
+  border: 1px solid red;
+  width: 20%;
+  margin-inline: auto;
+  text-align: center;
+  .media-icons {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+  }
+  .media-icons > i {
+    font-size: 1.2rem;
+    color: var(--cl-primary-blue);
+    padding: 0.3rem;
+    border: 1px solid var(--cl-neutral-gray);
+    border-radius: 100vw;
+  }
+  p {
+    font-size: 0.8rem;
+    color: var(--cl-neutral-gray);
   }
 }
 
