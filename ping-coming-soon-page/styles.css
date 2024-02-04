@@ -41,14 +41,16 @@ body {
 }
 
 .hero {
-  border: 1px solid red;
   --mg-bottom: 1rem;
   width: 31.5rem;
   text-align: center;
   .logo {
-    border: 1px solid red;
     text-align: center;
     padding-block: 1.5rem;
+    img {
+      width: 76px;
+      height: auto;
+    }
   }
   h1 {
     font-size: 2rem;
@@ -68,7 +70,6 @@ body {
 }
 
 .info-btn {
-  border: 1px solid red;
   margin-inline: auto;
   width: 100%;
   text-align: center;
@@ -102,7 +103,6 @@ input::placeholder {
 }
 
 .image {
-  border: 1px solid red;
   margin-inline: auto;
   width: 31.5rem;
   /* margin-bottom: 1.5rem; */
@@ -113,12 +113,10 @@ input::placeholder {
 }
 
 .medias {
-  border: 1px solid red;
   width: 18.75rem;
   margin-inline: auto;
   text-align: center;
   .media-icons {
-    border: 1px solid red;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 1rem;
@@ -137,7 +135,6 @@ input::placeholder {
 }
 
 footer {
-  border: 1px solid red;
   height: 5vh;
   height: 5svh;
   display: flex;
