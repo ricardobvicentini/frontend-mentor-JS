@@ -63,10 +63,23 @@
     </footer>
 
     <script>
-      const input = document.querySelector('.email-input');
+      const email = document.querySelector('.email-input');
       const btn = document.querySelector('.btn');
       const error = document.querySelector('.error-message');
-      btn.addEventListener('click', () => {});
+      const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+      btn.addEventListener('click', () => {
+        if (email.value === '' || !email.value.match(regex)) {
+          error.classList.remove('hidden');
+          email.style.borderColor = 'red';
+          email.value = '';
+        } else {
+          email.value = '';
+          error.classList.add('hidden');
+          email.style.borderColor = 'var(--cl-secondary-pale-blue)';
+          email.classList.add('animation');
+        }
+      });
     </script>
   </body>
 </html>

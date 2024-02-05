@@ -93,6 +93,7 @@ body {
   width: 67%;
   input {
     width: 100%;
+    font-family: 'Libre Franklin', sans-serif;
     border: none;
     border: 2px solid var(--cl-secondary-pale-blue);
     border-radius: 100vw;
@@ -180,7 +181,8 @@ footer {
   }
 
   50% {
-    border: 3px solid green;
+    border: 2px solid green;
+    outline: 2px solid green;
   }
 }
 
