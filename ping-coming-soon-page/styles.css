@@ -163,6 +163,29 @@ footer {
   color: hsl(228, 45%, 44%);
 }
 
+/* Utility Classes */
+
+.hidden {
+  display: none;
+}
+
+.animation {
+  animation: validation 400ms ease-in-out;
+}
+
+@keyframes validation {
+  0%,
+  100% {
+    border: 2px solid var(--cl-secondary-pale-blue);
+  }
+
+  50% {
+    border: 3px solid green;
+  }
+}
+
+/* Containers */
+
 @container (width < 850px) {
   .hero,
   .image {
