@@ -43,7 +43,6 @@ body {
 .hero {
   --mg-bottom: 1rem;
   width: 31.5rem;
-  text-align: center;
   .logo {
     text-align: center;
     padding-block: 1.5rem;
@@ -53,6 +52,7 @@ body {
     }
   }
   h1 {
+    text-align: center;
     font-size: 2rem;
     font-weight: 300;
     color: var(--cl-neutral-gray);
@@ -63,6 +63,7 @@ body {
     color: #000;
   }
   h2 {
+    text-align: center;
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: var(--mg-bottom);
@@ -70,19 +71,9 @@ body {
 }
 
 .info-btn {
-  margin-inline: auto;
   width: 100%;
-  text-align: center;
   display: flex;
   justify-content: space-between;
-  /* margin-bottom: 1.5rem; */
-  input {
-    width: 67%;
-    border: none;
-    border: 2px solid var(--cl-secondary-pale-blue);
-    border-radius: 100vw;
-    padding: 0.8rem 1rem;
-  }
   button {
     background-color: var(--cl-primary-blue);
     width: 30%;
@@ -96,14 +87,35 @@ body {
     box-shadow: 0 10px 20px var(--cl-secondary-pale-blue);
   }
 }
+
+.email-input {
+  position: relative;
+  width: 67%;
+  input {
+    width: 100%;
+    border: none;
+    border: 2px solid var(--cl-secondary-pale-blue);
+    border-radius: 100vw;
+    padding: 0.8rem 1rem;
+  }
+}
+
 input::placeholder {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 0.8rem;
   color: var(--cl-secondary-pale-blue);
 }
 
+.error-message {
+  position: absolute;
+  bottom: -70%;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  color: var(--cl-secondary-light-red);
+}
+
 .image {
-  margin-inline: auto;
   width: 31.5rem;
   /* margin-bottom: 1.5rem; */
   img {
@@ -114,7 +126,7 @@ input::placeholder {
 
 .medias {
   width: 18.75rem;
-  margin-inline: auto;
+
   text-align: center;
   .media-icons {
     display: flex;
@@ -178,8 +190,9 @@ footer {
 
   .info-btn {
     flex-direction: column;
-    gap: 1rem;
-    input,
+    text-align: center;
+    gap: 3rem;
+    .email-input,
     button {
       width: 100%;
     }
