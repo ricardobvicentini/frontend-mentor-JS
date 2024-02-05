@@ -24,9 +24,9 @@
         <h1>We are launching <span>soon!</span></h1>
         <h2>Subscribe and get notified</h2>
         <div class="info-btn">
-          <div class="email-input">
+          <div class="input-wrapper">
             <input
-              class="animation"
+              class="email-input"
               type="email"
               placeholder="Your email address..."
             />
@@ -34,7 +34,7 @@
               <em>Please provide a valid email address</em>
             </p>
           </div>
-          <button>Notify Me</button>
+          <button class="btn">Notify Me</button>
         </div>
       </section>
       <section class="image">
@@ -61,5 +61,12 @@
         >.
       </p>
     </footer>
+
+    <script>
+      const input = document.querySelector('.email-input');
+      const btn = document.querySelector('.btn');
+      const error = document.querySelector('.error-message');
+      btn.addEventListener('click', () => {});
+    </script>
   </body>
 </html>

@@ -88,7 +88,7 @@ body {
   }
 }
 
-.email-input {
+.input-wrapper {
   position: relative;
   width: 67%;
   input {
@@ -215,7 +215,7 @@ footer {
     flex-direction: column;
     text-align: center;
     gap: 3rem;
-    .email-input,
+    .input-wrapper,
     button {
       width: 100%;
     }
