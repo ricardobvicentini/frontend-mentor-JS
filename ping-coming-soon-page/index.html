@@ -78,6 +78,9 @@
           error.classList.add('hidden');
           email.style.borderColor = 'var(--cl-secondary-pale-blue)';
           email.classList.add('animation');
+          setTimeout(() => {
+            email.classList.remove('animation');
+          }, 500);
         }
       });
     </script>
