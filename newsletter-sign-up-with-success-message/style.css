@@ -24,9 +24,41 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  background-color: var(--cl-neutral-charcoal-grey);
 }
 
+.main_wrapper {
+  border: 1px solid red;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background-color: var(--cl-neutral-white);
+}
+
+/* Utility Class */
+
+.hidden {
+  display: none;
+}
+
+/* Modal */
+
+/* Footer */
+
 .attribution {
+  border: 1px solid red;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 11px;
   text-align: center;
 }
