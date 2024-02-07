@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cl-primary-tomato: hsl(4, 100%, 67%);
+  --cl-neutral-dark-slate-grey: hsl(234, 29%, 20%);
+  --cl-neutral-charcoal-grey: hsl(235, 18%, 26%);
+  --cl-neutral-grey: hsl(231, 7%, 60%);
+  --cl-neutral-white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
