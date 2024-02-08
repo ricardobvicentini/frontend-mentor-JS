@@ -54,6 +54,12 @@ body {
 
 .form_wrapper {
   border: 1px solid red;
+  padding: 2rem;
+  ul {
+    border: 1px solid red;
+    list-style-position: inside;
+    list-style-image: url(assets/images/icon-list.svg);
+  }
 }
 
 .image_wrapper {
