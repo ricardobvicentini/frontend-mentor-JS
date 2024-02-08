@@ -55,6 +55,11 @@ body {
 .form_wrapper {
   border: 1px solid red;
   padding: 2rem;
+  color: var(--cl-neutral-dark-slate-grey);
+  h1 {
+    border: 1px solid red;
+    font-size: 3.5rem;
+  }
   ul {
     border: 1px solid red;
     list-style-position: inside;
