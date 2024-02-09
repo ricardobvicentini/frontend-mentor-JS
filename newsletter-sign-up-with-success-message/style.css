@@ -63,12 +63,19 @@ body {
   justify-content: space-evenly;
   h1 {
     border: 1px solid red;
-    font-size: 3.5rem;
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
   }
   ul {
     border: 1px solid red;
     list-style-position: inside;
     list-style-image: url(assets/images/icon-list.svg);
+    li {
+      font-size: 1.25rem;
+    }
   }
 }
 
@@ -96,7 +103,10 @@ body {
   align-items: center;
   font-size: 11px;
   text-align: center;
+  p {
+    color: var(--cl-neutral-white);
+  }
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: rgb(174, 191, 250);
 }
