@@ -45,17 +45,22 @@ body {
 
 .content_wrapper {
   border: 1px solid red;
+  width: 70%;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1.5rem;
   padding: 2rem;
   background-color: var(--cl-neutral-white);
+  border-radius: 30px;
 }
 
 .form_wrapper {
   border: 1px solid red;
   padding: 2rem;
   color: var(--cl-neutral-dark-slate-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   h1 {
     border: 1px solid red;
     font-size: 3.5rem;
