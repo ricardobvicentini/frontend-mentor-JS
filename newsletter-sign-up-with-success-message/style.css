@@ -79,6 +79,43 @@ body {
   }
 }
 
+.email_message {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 700;
+  .error_message {
+    color: var(--cl-primary-tomato);
+  }
+}
+
+.input-btn_wrapper {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  input,
+  button {
+    width: 100%;
+    height: 3.5rem;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  input {
+    border: 1px solid var(--cl-neutral-grey);
+    padding-inline: 1.5rem;
+  }
+  button {
+    text-align: center;
+    font-weight: 700;
+    color: var(--cl-neutral-white);
+    background-color: var(--cl-neutral-dark-slate-grey);
+    letter-spacing: 1px;
+  }
+}
+
 .image_wrapper {
   border: 1px solid red;
 }
