@@ -75,6 +75,7 @@ body {
     list-style-image: url(assets/images/icon-list.svg);
     li {
       font-size: 1.25rem;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -102,18 +103,28 @@ body {
     border: none;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
   }
   input {
     border: 1px solid var(--cl-neutral-grey);
     padding-inline: 1.5rem;
+    color: var(--cl-neutral-grey);
   }
   button {
     text-align: center;
-    font-weight: 700;
     color: var(--cl-neutral-white);
     background-color: var(--cl-neutral-dark-slate-grey);
-    letter-spacing: 1px;
   }
+}
+
+button:hover {
+  background-image: linear-gradient(
+    90deg,
+    hsl(350, 100%, 67%),
+    hsl(11, 100%, 63%)
+  );
+  box-shadow: 0 10px 25px hsla(350, 100%, 67%, 0.438);
 }
 
 .image_wrapper {
