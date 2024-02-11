@@ -16,6 +16,10 @@
   --cl-neutral-charcoal-grey: hsl(235, 18%, 26%);
   --cl-neutral-grey: hsl(231, 7%, 60%);
   --cl-neutral-white: hsl(0, 0%, 100%);
+
+  --fs-primary: clamp(2rem, 4vw, 4rem);
+  --fs-neutral: clamp(0.5rem, 1.5vw, 1.25rem);
+  --fs-neutral-sm: clamp(0.5rem, 1vw, 1rem);
 }
 
 html {
@@ -64,10 +68,10 @@ body {
   justify-content: space-evenly;
   h1 {
     border: 1px solid red;
-    font-size: 4rem;
+    font-size: var(--fs-primary);
   }
   h3 {
-    font-size: 1.25rem;
+    font-size: var(--fs-neutral);
     font-weight: 400;
   }
   .list_wrapper {
@@ -79,19 +83,8 @@ body {
     gap: 1rem;
     p {
       border: 1px solid red;
-      font-size: 1.25rem;
+      font-size: var(--fs-neutral);
     }
-  }
-}
-
-.email_message {
-  border: 1px solid red;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  font-weight: 700;
-  .error_message {
-    color: var(--cl-primary-tomato);
   }
 }
 
@@ -99,8 +92,16 @@ body {
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  p {
+  .email_message {
+    border: 1px solid red;
     padding-block: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-neutral-sm);
+    font-weight: 700;
+    .error_message {
+      color: var(--cl-primary-tomato);
+    }
   }
   input,
   button {
@@ -109,6 +110,7 @@ body {
     border: none;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
+    font-size: var(--fs-neutral-sm);
     cursor: pointer;
   }
   input {
@@ -136,6 +138,9 @@ button:hover {
 
 .image_wrapper {
   border: 1px solid red;
+  .mobile_image {
+    display: none;
+  }
 }
 
 /* Utility Class */
@@ -164,4 +169,13 @@ button:hover {
 }
 .attribution a {
   color: rgb(174, 191, 250);
+}
+
+/* Media */
+
+@media screen and (width < 68.75em) {
+  .content_wrapper {
+    width: 100%;
+    height: 100%;
+  }
 }
