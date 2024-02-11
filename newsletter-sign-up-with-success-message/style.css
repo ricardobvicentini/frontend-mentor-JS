@@ -70,21 +70,18 @@ body {
     font-size: 1.25rem;
     font-weight: 400;
   }
-  ul {
+  .list_wrapper {
     border: 1px solid red;
-    list-style-position: inside;
-    li {
-      list-style-image: url(assets/images/icon-list.svg);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    gap: 1rem;
+    p {
       border: 1px solid red;
       font-size: 1.25rem;
-      margin-bottom: 1rem;
     }
   }
-}
-
-li::marker {
-  /* content: url(assets/images/icon-list.svg); */
-  margin-right: 2rem;
 }
 
 .email_message {
