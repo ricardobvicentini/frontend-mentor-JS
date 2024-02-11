@@ -175,7 +175,15 @@ button:hover {
 
 @media screen and (width < 68.75em) {
   .content_wrapper {
-    width: 100%;
+    width: max-content;
     height: 100%;
+    grid-template-columns: 1fr;
+    .desktop_image {
+      display: none;
+    }
+    .mobile_image {
+      display: block;
+      grid-row: -1/2;
+    }
   }
 }
