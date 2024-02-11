@@ -99,7 +99,9 @@ body {
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  p {
+    padding-block: 0.5rem;
+  }
   input,
   button {
     width: 100%;
@@ -107,16 +109,17 @@ body {
     border: none;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
     cursor: pointer;
   }
   input {
     border: 1px solid var(--cl-neutral-grey);
+    margin-bottom: 1.5rem;
     padding-inline: 1.5rem;
     color: var(--cl-neutral-grey);
   }
   button {
     text-align: center;
+    font-weight: 700;
     color: var(--cl-neutral-white);
     background-color: var(--cl-neutral-dark-slate-grey);
   }
