@@ -41,6 +41,7 @@ body {
 
 .main_wrapper {
   border: 1px solid red;
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -136,13 +137,6 @@ button:hover {
   box-shadow: 0 10px 25px hsla(350, 100%, 67%, 0.438);
 }
 
-.image_wrapper {
-  border: 1px solid red;
-  .mobile_image {
-    display: none;
-  }
-}
-
 /* Utility Class */
 
 .hidden {
@@ -162,7 +156,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   font-size: 11px;
-  text-align: center;
+  /* text-align: center; */
   p {
     color: var(--cl-neutral-white);
   }
@@ -198,8 +192,13 @@ button:hover {
     width: 23.44rem;
     height: 100%;
     padding: 0;
+    gap: 0;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
+  }
+
+  .form_wrapper {
+    padding: 1rem;
   }
 
   .image_wrapper {
