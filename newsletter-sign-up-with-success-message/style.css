@@ -17,9 +17,9 @@
   --cl-neutral-grey: hsl(231, 7%, 60%);
   --cl-neutral-white: hsl(0, 0%, 100%);
 
-  --fs-primary: clamp(2rem, 4vw, 4rem);
-  --fs-neutral: clamp(0.5rem, 1.5vw, 1.25rem);
-  --fs-neutral-sm: clamp(0.5rem, 1vw, 1rem);
+  --fs-primary: clamp(3rem, 4vw, 4rem);
+  --fs-neutral: clamp(1rem, 1.5vw, 1.25rem);
+  --fs-neutral-sm: clamp(0.8rem, 1vw, 1rem);
 }
 
 html {
@@ -173,7 +173,7 @@ button:hover {
 
 /* Media */
 
-@media screen and (width < 68.75em) {
+@media screen and (width < 75em) {
   .content_wrapper {
     width: 80%;
   }
@@ -182,7 +182,7 @@ button:hover {
 @media screen and (width < 62.5em) {
   .content_wrapper {
     width: 100%;
-    height: 100%;
+    height: 80%;
     border-radius: 0;
   }
 
@@ -190,5 +190,33 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (width < 53em) {
+  .content_wrapper {
+    width: 23.44rem;
+    height: 100%;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .image_wrapper {
+    grid-row: 1/2;
+    gap: 0;
+    height: 18.75rem;
+    background-image: url(assets/images/illustration-sign-up-mobile.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    .desktop_image {
+      display: none;
+    }
+  }
+
+  .attribution {
+    p {
+      color: var(--cl-neutral-dark-slate-grey);
+    }
   }
 }
