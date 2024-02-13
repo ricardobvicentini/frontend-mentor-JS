@@ -50,7 +50,7 @@ body {
 
 .content_wrapper {
   border: 1px solid red;
-  width: 70%;
+  width: 70cqi;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1.5rem;
@@ -175,15 +175,20 @@ button:hover {
 
 @media screen and (width < 68.75em) {
   .content_wrapper {
-    width: max-content;
+    width: 80%;
+  }
+}
+
+@media screen and (width < 62.5em) {
+  .content_wrapper {
+    width: 100%;
     height: 100%;
-    grid-template-columns: 1fr;
-    .desktop_image {
-      display: none;
-    }
-    .mobile_image {
-      display: block;
-      grid-row: -1/2;
-    }
+    border-radius: 0;
+  }
+
+  .image_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
