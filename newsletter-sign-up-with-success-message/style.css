@@ -219,3 +219,9 @@ button:hover {
     }
   }
 }
+
+@media screen and (width < 24em) {
+  .content_wrapper {
+    width: 100%;
+  }
+}
