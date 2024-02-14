@@ -151,6 +151,11 @@ button:hover {
   padding: 3rem;
   background-color: var(--cl-neutral-white);
   border-radius: 30px;
+  color: var(--cl-neutral-dark-slate-grey);
+}
+
+.icon_wrapper {
+  border: 1px solid red;
 }
 
 /* Footer */
