@@ -145,6 +145,14 @@ button:hover {
 
 /* Modal */
 
+.modal_wrapper {
+  width: 30rem;
+  height: 30rem;
+  padding: 3rem;
+  background-color: var(--cl-neutral-white);
+  border-radius: 30px;
+}
+
 /* Footer */
 
 .attribution {
