@@ -148,14 +148,40 @@ button:hover {
 .modal_wrapper {
   width: 30rem;
   height: 30rem;
-  padding: 3rem;
+  padding: 2rem 3rem;
   background-color: var(--cl-neutral-white);
   border-radius: 30px;
   color: var(--cl-neutral-dark-slate-grey);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  button {
+    width: 100%;
+    height: 3.5rem;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--fs-neutral-sm);
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    color: var(--cl-neutral-white);
+    background-color: var(--cl-neutral-dark-slate-grey);
+  }
 }
 
-.icon_wrapper {
-  border: 1px solid red;
+.modal_icon {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+}
+
+.modal_content {
+  h1 {
+    font-size: var(--fs-primary);
+  }
+  p {
+    font-size: var(--fs-neutral);
+  }
 }
 
 /* Footer */
