@@ -147,21 +147,22 @@ button:hover {
 
 .modal_wrapper {
   width: 30rem;
-  height: 30rem;
-  padding: 2rem 3rem;
+  height: 32rem;
+  padding: 1rem 3rem;
   background-color: var(--cl-neutral-white);
   border-radius: 30px;
   color: var(--cl-neutral-dark-slate-grey);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: center;
+  gap: 2.5rem;
   button {
     width: 100%;
     height: 3.5rem;
     border: none;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
-    font-size: var(--fs-neutral-sm);
+    font-size: 1rem;
     cursor: pointer;
     text-align: center;
     font-weight: 700;
@@ -171,16 +172,18 @@ button:hover {
 }
 
 .modal_icon {
-  width: 2.5rem;
+  width: 3.5rem;
   aspect-ratio: 1/1;
 }
 
 .modal_content {
   h1 {
-    font-size: var(--fs-primary);
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
   }
   p {
-    font-size: var(--fs-neutral);
+    font-size: 1rem;
   }
 }
 
