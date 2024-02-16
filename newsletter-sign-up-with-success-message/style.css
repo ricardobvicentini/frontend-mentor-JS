@@ -227,6 +227,24 @@ button:hover {
     justify-content: center;
     align-items: center;
   }
+
+  .modal_wrapper {
+    width: 29rem;
+    height: 30rem;
+  }
+
+  .modal_icon {
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+  }
+
+  .modal_content {
+    h1 {
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+  }
 }
 
 @media screen and (width < 53em) {
