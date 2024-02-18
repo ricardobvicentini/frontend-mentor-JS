@@ -137,15 +137,10 @@ button:hover {
   box-shadow: 0 10px 25px hsla(350, 100%, 67%, 0.438);
 }
 
-/* Utility Class */
-
-.hidden {
-  display: none;
-}
-
 /* Modal */
 
 .modal_wrapper {
+  border: 1px solid red;
   width: 30rem;
   height: 32rem;
   padding: 1rem 3rem;
@@ -313,4 +308,10 @@ button:hover {
   .content_wrapper {
     width: 100%;
   }
+}
+
+/* Utility Class */
+
+.hidden {
+  display: none;
 }
