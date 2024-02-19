@@ -96,7 +96,15 @@
           email.style.borderColor = 'var(--cl-primary-tomato)';
           email.style.color = 'var(--cl-primary-tomato)';
           email.style.backgroundColor = 'var(--cl-error-tomato)';
+        } else {
+          errMes.classList.add('hidden');
         }
+      });
+
+      email.addEventListener('focus', () => {
+        email.style.borderColor = 'var(--cl-neutral-grey)';
+        email.style.color = 'var(--cl-neutral-grey)';
+        email.style.backgroundColor = 'transparent';
       });
     </script>
   </body>
