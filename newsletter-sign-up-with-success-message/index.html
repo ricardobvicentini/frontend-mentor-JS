@@ -35,7 +35,7 @@
               <p>Email address</p>
               <p class="error_message hidden">Valid email required</p>
             </div>
-            <input type="email" placeholder="email@company.com" />
+            <input id="email" type="email" placeholder="email@company.com" />
             <button id="btn_subs">Subscribe to monthly newsletter</button>
           </div>
           <!-- Sign-up form end -->
@@ -82,5 +82,9 @@
         </p>
       </div>
     </main>
+
+    <script>
+      const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    </script>
   </body>
 </html>
