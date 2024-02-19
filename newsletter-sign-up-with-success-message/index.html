@@ -35,7 +35,12 @@
               <p>Email address</p>
               <p class="error_message hidden">Valid email required</p>
             </div>
-            <input id="email" type="email" placeholder="email@company.com" />
+            <input
+              id="email"
+              type="email"
+              placeholder="email@company.com"
+              autocomplete="off"
+            />
             <button id="btn_subs">Subscribe to monthly newsletter</button>
           </div>
           <!-- Sign-up form end -->
@@ -85,9 +90,12 @@
 
     <script>
       const email = document.getElementById('email');
-      const errMes = document.querySelector('.error_message');
       const btnSubs = document.getElementById('btn_subs');
       const btnDis = document.getElementById('btn_dismiss');
+      const errMes = document.querySelector('.error_message');
+      const content = document.querySelector('.content_wrapper');
+      const modal = document.querySelector('.modal_wrapper');
+
       const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
       btnSubs.addEventListener('click', () => {
@@ -98,6 +106,8 @@
           email.style.backgroundColor = 'var(--cl-error-tomato)';
         } else {
           errMes.classList.add('hidden');
+          content.classList.add('hidden');
+          modal.classList.remove('hidden');
         }
       });
 
