@@ -16,6 +16,7 @@
   --cl-neutral-charcoal-grey: hsl(235, 18%, 26%);
   --cl-neutral-grey: hsl(231, 7%, 60%);
   --cl-neutral-white: hsl(0, 0%, 100%);
+  --cl-error-tomato: hsl(4, 88%, 94%);
 
   --fs-primary: clamp(3rem, 4vw, 4rem);
   --fs-neutral: clamp(1rem, 1.5vw, 1.25rem);

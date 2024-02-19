@@ -84,7 +84,20 @@
     </main>
 
     <script>
+      const email = document.getElementById('email');
+      const errMes = document.querySelector('.error_message');
+      const btnSubs = document.getElementById('btn_subs');
+      const btnDis = document.getElementById('btn_dismiss');
       const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+      btnSubs.addEventListener('click', () => {
+        if (email.value === '' || !email.value.match(regex)) {
+          errMes.classList.remove('hidden');
+          email.style.borderColor = 'var(--cl-primary-tomato)';
+          email.style.color = 'var(--cl-primary-tomato)';
+          email.style.backgroundColor = 'var(--cl-error-tomato)';
+        }
+      });
     </script>
   </body>
 </html>
