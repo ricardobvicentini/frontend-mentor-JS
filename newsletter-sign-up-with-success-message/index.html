@@ -108,6 +108,7 @@
           errMes.classList.add('hidden');
           content.classList.add('hidden');
           modal.classList.remove('hidden');
+          email.value = '';
         }
       });
 
@@ -115,6 +116,11 @@
         email.style.borderColor = 'var(--cl-neutral-grey)';
         email.style.color = 'var(--cl-neutral-grey)';
         email.style.backgroundColor = 'transparent';
+      });
+
+      btnDis.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        content.classList.remove('hidden');
       });
     </script>
   </body>
