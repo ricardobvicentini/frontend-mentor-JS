@@ -58,6 +58,12 @@ body {
   padding: 2rem;
   background-color: var(--cl-neutral-white);
   border-radius: 30px;
+  /* scale: 0.9;
+  opacity: 0.3;
+  animation: zoom 500ms ease-in-out forwards; */
+}
+
+.zoom_animation {
   scale: 0.9;
   opacity: 0.3;
   animation: zoom 500ms ease-in-out forwards;
