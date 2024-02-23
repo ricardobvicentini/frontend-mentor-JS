@@ -2,6 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 
+:root {
+  --cl-purple: hsl(259, 100%, 65%);
+  --cl-light-red: hsl(0, 100%, 67%);
+  --cl-white: hsl(0, 0%, 100%);
+  --cl-off-white: hsl(0, 0%, 94%);
+  --cl-light-grey: hsl(0, 0%, 86%);
+  --cl-smokey-grey: hsl(0, 1%, 44%);
+  --cl-off-black: hsl(0, 0%, 8%);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
