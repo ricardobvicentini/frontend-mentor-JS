@@ -2,6 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --cl-purple: hsl(259, 100%, 65%);
   --cl-light-red: hsl(0, 100%, 67%);
@@ -14,6 +22,18 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background-color: var(--cl-light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 60%;
+  height: 70%;
+  background-color: var(--cl-white);
+  border-radius: 20px 20px 180px 20px;
 }
 
 /* Footer */
@@ -21,6 +41,13 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  height: 5%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
