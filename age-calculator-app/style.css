@@ -52,11 +52,26 @@ body {
   }
 }
 
+/* input::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  color: var(--cl-smokey-grey);
+} */
+
 .date_text {
   border: 1px solid red;
   text-transform: uppercase;
   letter-spacing: 5px;
   color: var(--cl-smokey-grey);
+}
+
+.results_wrapper > * {
+  font-size: 5rem;
+  font-weight: 800;
+  span {
+    color: var(--cl-purple);
+    letter-spacing: 10px;
+  }
 }
 
 /* Footer */
