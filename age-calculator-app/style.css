@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 :root {
   --cl-purple: hsl(259, 100%, 65%);
   --cl-light-red: hsl(0, 100%, 67%);
@@ -46,23 +51,34 @@ body {
   gap: 1rem 2rem;
   input {
     height: 4rem;
+    padding: 1rem 0 0 1rem;
     border: none;
     border: 1px solid var(--cl-light-grey);
     border-radius: 10px;
   }
 }
 
-/* input::placeholder {
+input::placeholder {
   font-family: 'Poppins', sans-serif;
   font-size: 32px;
   color: var(--cl-smokey-grey);
-} */
+}
 
 .date_text {
   border: 1px solid red;
   text-transform: uppercase;
   letter-spacing: 5px;
   color: var(--cl-smokey-grey);
+}
+
+.division {
+  border: 1px solid var(--cl-light-grey);
+}
+
+.btn {
+  background-color: var(--cl-purple);
+  border-radius: 100vw;
+  padding: 1.5rem;
 }
 
 .results_wrapper > * {
