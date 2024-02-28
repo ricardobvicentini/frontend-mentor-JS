@@ -50,6 +50,7 @@ body {
   grid-row: 1fr 1fr;
   gap: 1rem 2rem;
   input {
+    min-width: 0;
     height: 4rem;
     padding: 1rem 0 0 1rem;
     border: none;
