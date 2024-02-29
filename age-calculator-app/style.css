@@ -43,7 +43,6 @@ body {
 }
 
 .input_wrapper {
-  border: 1px solid red;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -66,14 +65,28 @@ input::placeholder {
 }
 
 .date_text {
-  border: 1px solid red;
   text-transform: uppercase;
   letter-spacing: 5px;
   color: var(--cl-smokey-grey);
 }
 
 .division {
-  border: 1px solid var(--cl-light-grey);
+  position: relative;
+  display: flex;
+  justify-content: end;
+  .btn {
+    z-index: 1;
+  }
+}
+
+.division::before {
+  content: '';
+  position: absolute;
+  background-color: var(--cl-light-grey);
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  translate: 0 -50%;
 }
 
 .btn {
@@ -83,6 +96,8 @@ input::placeholder {
 }
 
 .results_wrapper > * {
+  border: 1px solid red;
+  height: fit-content;
   font-size: 5rem;
   font-weight: 800;
   span {
