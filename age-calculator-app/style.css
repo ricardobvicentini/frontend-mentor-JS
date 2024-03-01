@@ -23,6 +23,10 @@ img {
   --cl-light-grey: hsl(0, 0%, 86%);
   --cl-smokey-grey: hsl(0, 1%, 44%);
   --cl-off-black: hsl(0, 0%, 8%);
+
+  --fs-date: 3cqi;
+  --fs-input: 5cqi;
+  --fs-results: 14cqi;
 }
 
 body {
@@ -40,6 +44,7 @@ body {
   padding: 3rem;
   background-color: var(--cl-white);
   border-radius: 20px 20px 180px 20px;
+  container-type: inline-size;
 }
 
 .input_wrapper {
@@ -51,7 +56,9 @@ body {
   input {
     min-width: 0;
     height: 4rem;
-    padding: 1rem 0 0 1rem;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--fs-input);
     border: none;
     border: 1px solid var(--cl-light-grey);
     border-radius: 10px;
@@ -60,11 +67,12 @@ body {
 
 input::placeholder {
   font-family: 'Poppins', sans-serif;
-  font-size: 32px;
+  font-size: var(--fs-input);
   color: var(--cl-smokey-grey);
 }
 
 .date_text {
+  font-size: var(--fs-date);
   text-transform: uppercase;
   letter-spacing: 5px;
   color: var(--cl-smokey-grey);
@@ -98,7 +106,7 @@ input::placeholder {
 .results_wrapper > * {
   border: 1px solid red;
   height: fit-content;
-  font-size: 5rem;
+  font-size: var(--fs-results);
   font-weight: 800;
   span {
     color: var(--cl-purple);
