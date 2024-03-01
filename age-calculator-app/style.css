@@ -26,7 +26,7 @@ img {
 
   --fs-date: 3cqi;
   --fs-input: 5cqi;
-  --fs-results: 14cqi;
+  --fs-results: clamp(4rem, 16cqi, 5rem);
 }
 
 body {
