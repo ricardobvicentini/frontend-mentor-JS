@@ -16,6 +16,7 @@ img {
 }
 
 :root {
+  /* Colors */
   --cl-purple: hsl(259, 100%, 65%);
   --cl-light-red: hsl(0, 100%, 67%);
   --cl-white: hsl(0, 0%, 100%);
@@ -23,10 +24,12 @@ img {
   --cl-light-grey: hsl(0, 0%, 86%);
   --cl-smokey-grey: hsl(0, 1%, 44%);
   --cl-off-black: hsl(0, 0%, 8%);
-
-  --fs-date: 3cqi;
-  --fs-input: 5cqi;
+  /* Font size*/
+  --fs-date: clamp(0.8rem, 3cqi, 1rem);
+  --fs-input: clamp(1rem, 5cqi, 2rem);
   --fs-results: clamp(4rem, 16cqi, 5rem);
+  /* Image width */
+  --ws-img: clamp(5rem, 13cqi, 8rem);
 }
 
 body {
@@ -83,6 +86,10 @@ input::placeholder {
   display: flex;
   justify-content: end;
   .btn {
+    width: var(--ws-img);
+    background-color: var(--cl-purple);
+    border-radius: 100vw;
+    padding: 1.5rem;
     z-index: 1;
   }
 }
@@ -95,12 +102,6 @@ input::placeholder {
   height: 2px;
   top: 50%;
   translate: 0 -50%;
-}
-
-.btn {
-  background-color: var(--cl-purple);
-  border-radius: 100vw;
-  padding: 1.5rem;
 }
 
 .results_wrapper > * {
