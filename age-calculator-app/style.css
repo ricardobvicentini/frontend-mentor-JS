@@ -106,7 +106,6 @@ input::placeholder {
 }
 
 .results_wrapper > * {
-  border: 1px solid red;
   height: fit-content;
   font-size: var(--fs-results);
   font-weight: 800;
