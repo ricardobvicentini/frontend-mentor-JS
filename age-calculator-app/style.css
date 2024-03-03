@@ -26,10 +26,10 @@ img {
   --cl-off-black: hsl(0, 0%, 8%);
   /* Font size*/
   --fs-date: clamp(0.8rem, 3cqi, 1rem);
-  --fs-input: clamp(1rem, 5cqi, 2rem);
-  --fs-results: clamp(4rem, 16cqi, 5rem);
+  --fs-input: clamp(1rem, 4cqi, 2rem);
+  --fs-results: clamp(2.75rem, 16cqi, 5rem);
   /* Image width */
-  --ws-img: clamp(5rem, 13cqi, 8rem);
+  --ws-img: clamp(5rem, 13cqi, 7rem);
 }
 
 body {
@@ -90,6 +90,7 @@ input::placeholder {
     background-color: var(--cl-purple);
     border-radius: 100vw;
     padding: 1.5rem;
+    cursor: pointer;
     z-index: 1;
   }
 }
@@ -130,4 +131,28 @@ input::placeholder {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (width < 53.4em) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (width < 43.75em) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 2rem;
+  }
+
+  .input_wrapper {
+    width: 100%;
+    column-gap: 1rem;
+  }
+
+  .division {
+    justify-content: center;
+  }
 }
