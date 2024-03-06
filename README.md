@@ -1,4 +1,4 @@
 # frontend-mentor-JS
  Frontend Mentor - JS exercises
 
- ![](images/screenshot-1.png)
+ ![](article-preview-component/images/screenshot-1.png)
