@@ -4,4 +4,5 @@
 ![](article-preview-component/images/screenshot-1.png)
 ![](base-apparel-coming-soon/images/screenshot-1.png)
 ![](faq-accordion/assets/images/screenshot-1.png)
+![](intro-component-with-signup-form/images/screenshot-1.png)
  
