@@ -5,4 +5,5 @@
 ![](base-apparel-coming-soon/images/screenshot-1.png)
 ![](faq-accordion/assets/images/screenshot-1.png)
 ![](intro-component-with-signup-form/images/screenshot-1.png)
+![](newsletter-sign-up-with-success-message/assets/images/screenshot-1.png)
  
