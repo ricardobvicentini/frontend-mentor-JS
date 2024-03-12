@@ -20,9 +20,9 @@
         <p class="date_text" for="day">Day</p>
         <p class="date_text" for="month">Month</p>
         <p class="date_text" for="year">Year</p>
-        <input type="number" placeholder="DD" />
-        <input type="number" placeholder="MM" />
-        <input type="number" placeholder="YYYY" />
+        <input id="day_input" type="number" placeholder="DD" />
+        <input id="month_input" type="number" placeholder="MM" />
+        <input id="year_input" type="number" placeholder="YYYY" />
       </div>
       <div class="division">
         <img class="btn" src="assets/images/icon-arrow.svg" alt="Down arrow" />
@@ -51,5 +51,11 @@
         >.
       </p>
     </div>
+    <script>
+      const dayInput = document.getElementById('day_input');
+      const monthInput = document.getElementById('month_input');
+      const yearInput = document.getElementById('year_input');
+      const btn = document.querySelector('.btn');
+    </script>
   </body>
 </html>
