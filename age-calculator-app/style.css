@@ -27,7 +27,7 @@ img {
   /* Font size*/
   --fs-date: clamp(0.8rem, 3cqi, 1rem);
   --fs-input: clamp(1rem, 4cqi, 2rem);
-  --fs-results: clamp(2.5rem, 16cqi, 4rem);
+  --fs-results: clamp(2.75rem, 16cqi, 4rem);
   /* Image width */
   --ws-img: clamp(5rem, 13cqi, 7rem);
 }
@@ -43,7 +43,7 @@ body {
 
 .wrapper {
   width: 60%;
-  height: 70%;
+  height: 65%;
   padding: 3rem;
   background-color: var(--cl-white);
   border-radius: 20px 20px 180px 20px;
@@ -144,8 +144,8 @@ input::placeholder {
   .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding-inline: 2rem;
+    justify-content: space-evenly;
+    padding-inline: 1rem;
   }
 
   .input_wrapper {
