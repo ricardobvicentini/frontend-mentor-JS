@@ -134,6 +134,12 @@ input::placeholder {
   color: hsl(228, 45%, 44%);
 }
 
+/* Utility Class */
+
+.hidden {
+  display: none;
+}
+
 @media screen and (width < 53.4em) {
   .wrapper {
     width: 90%;
