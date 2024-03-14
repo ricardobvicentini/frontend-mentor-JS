@@ -117,6 +117,10 @@ input::placeholder {
   }
 }
 
+.error_message {
+  color: var(--cl-light-red);
+}
+
 /* Footer */
 
 .attribution {
