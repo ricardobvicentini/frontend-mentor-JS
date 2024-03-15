@@ -20,9 +20,30 @@
         <p class="date_text" for="day">Day</p>
         <p class="date_text" for="month">Month</p>
         <p class="date_text" for="year">Year</p>
-        <input id="day_input" type="number" placeholder="DD" />
-        <input id="month_input" type="number" placeholder="MM" />
-        <input id="year_input" type="number" placeholder="YYYY" />
+        <input
+          id="day_input"
+          type="number"
+          placeholder="DD"
+          required="required"
+          minlength="1"
+          maxlength="2"
+        />
+        <input
+          id="month_input"
+          type="number"
+          placeholder="MM"
+          required="required"
+          minlength="1"
+          maxlength="2"
+        />
+        <input
+          id="year_input"
+          type="number"
+          placeholder="YYYY"
+          required="required"
+          minlength="1"
+          maxlength="4"
+        />
         <p class="error_message error_day hidden"><em>day</em></p>
         <p class="error_message error_month hidden"><em>month</em></p>
         <p class="error_message error_year hidden"><em>year</em></p>
