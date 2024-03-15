@@ -55,10 +55,20 @@
       </p>
     </div>
     <script>
-      const dayInput = document.getElementById('day_input');
-      const monthInput = document.getElementById('month_input');
-      const yearInput = document.getElementById('year_input');
+      const day1 = document.getElementById('day_input').value;
+      const month1 = document.getElementById('month_input').value;
+      const year1 = document.getElementById('year_input').value;
       const btn = document.querySelector('.btn');
+
+      function ageCalc() {
+        const date = new Date();
+        const day2 = date.getDate();
+        const month2 = date.getMonth();
+        const year2 = date.getFullYear();
+        const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        console.log(day2, month2, year2);
+      }
+      ageCalc();
 
       btn.addEventListener('click', () => {});
     </script>
