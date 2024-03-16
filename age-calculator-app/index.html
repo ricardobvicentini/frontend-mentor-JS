@@ -53,13 +53,13 @@
       </div>
       <div class="results_wrapper">
         <p>
-          <span><em>--</em></span> <em>years</em>
+          <span class="year"><em>--</em></span> <em>years</em>
         </p>
         <p>
-          <span><em>--</em></span> <em>months</em>
+          <span class="month"><em>--</em></span> <em>months</em>
         </p>
         <p>
-          <span><em>--</em></span> <em>days</em>
+          <span class="days"><em>--</em></span> <em>days</em>
         </p>
       </div>
     </section>
@@ -76,6 +76,9 @@
       </p>
     </div>
     <script>
+      const yearResult = document.querySelector('.year');
+      const monthResult = document.querySelector('.month');
+      const daysResult = document.querySelector('.days');
       const btn = document.querySelector('.btn');
 
       function ageCalc() {
@@ -101,6 +104,10 @@
         let day = day2 - day1;
         let month = month2 - month1;
         let year = year2 - year1;
+
+        yearResult.innerHTML = year;
+        monthResult.innerHTML = month;
+        daysResult.innerHTML = day;
 
         console.log(date, day2, month2, year2);
         console.log(day1, month1, year1);
