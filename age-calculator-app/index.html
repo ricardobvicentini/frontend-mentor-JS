@@ -76,22 +76,40 @@
       </p>
     </div>
     <script>
-      const day1 = document.getElementById('day_input').value;
-      const month1 = document.getElementById('month_input').value;
-      const year1 = document.getElementById('year_input').value;
       const btn = document.querySelector('.btn');
 
       function ageCalc() {
-        const date = new Date();
-        const day2 = date.getDate();
-        const month2 = date.getMonth();
-        const year2 = date.getFullYear();
-        const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        console.log(day2, month2, year2);
-      }
-      ageCalc();
+        let date = new Date();
+        let day1 = document.getElementById('day_input').value;
+        let month1 = document.getElementById('month_input').value;
+        let year1 = document.getElementById('year_input').value;
+        let day2 = date.getDate();
+        let month2 = 1 + date.getMonth();
+        let year2 = date.getFullYear();
+        let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-      btn.addEventListener('click', () => {});
+        if (day1 > day2) {
+          day2 = day2 + monthLastDays[month2 - 1];
+          month2 = month2 - 1;
+        }
+
+        if (month1 > month2) {
+          month2 = month2 + 12;
+          year2 = year2 - 1;
+        }
+
+        let day = day2 - day1;
+        let month = month2 - month1;
+        let year = year2 - year1;
+
+        console.log(date, day2, month2, year2);
+        console.log(day1, month1, year1);
+        console.log(day, month, year);
+      }
+
+      btn.addEventListener('click', () => {
+        ageCalc();
+      });
     </script>
   </body>
 </html>
