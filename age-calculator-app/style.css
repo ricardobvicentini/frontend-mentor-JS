@@ -27,6 +27,7 @@ img {
   /* Font size*/
   --fs-date: clamp(0.8rem, 3cqi, 1rem);
   --fs-input: clamp(1rem, 4cqi, 2rem);
+  --fs-error: clamp(0.6rem, 2cqi, 2rem);
   --fs-results: clamp(2.75rem, 16cqi, 4rem);
   /* Image width */
   --ws-img: clamp(5rem, 13cqi, 7rem);
@@ -66,6 +67,11 @@ body {
     border: none;
     border: 1px solid var(--cl-light-grey);
     border-radius: 10px;
+  }
+
+  .error_message {
+    color: var(--cl-light-red);
+    font-size: var(--fs-error);
   }
 }
 
@@ -115,11 +121,6 @@ input::placeholder {
     color: var(--cl-purple);
     letter-spacing: 10px;
   }
-}
-
-.error_message {
-  color: var(--cl-light-red);
-  font-weight: 400;
 }
 
 /* Footer */
