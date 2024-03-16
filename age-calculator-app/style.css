@@ -119,6 +119,7 @@ input::placeholder {
 
 .error_message {
   color: var(--cl-light-red);
+  font-weight: 400;
 }
 
 /* Footer */

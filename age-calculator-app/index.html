@@ -76,16 +76,17 @@
       </p>
     </div>
     <script>
+      let day1 = document.getElementById('day_input').value;
+      let month1 = document.getElementById('month_input').value;
+      let year1 = document.getElementById('year_input').value;
       const yearResult = document.querySelector('.year');
       const monthResult = document.querySelector('.month');
       const daysResult = document.querySelector('.days');
+      const allErrMsg = document.querySelectorAll('.error_message');
       const btn = document.querySelector('.btn');
 
       function ageCalc() {
         let date = new Date();
-        let day1 = document.getElementById('day_input').value;
-        let month1 = document.getElementById('month_input').value;
-        let year1 = document.getElementById('year_input').value;
         let day2 = date.getDate();
         let month2 = 1 + date.getMonth();
         let year2 = date.getFullYear();
@@ -105,17 +106,22 @@
         let month = month2 - month1;
         let year = year2 - year1;
 
-        yearResult.innerHTML = year;
-        monthResult.innerHTML = month;
-        daysResult.innerHTML = day;
+        yearResult.innerHTML = `<em>${year}</em>`;
+        monthResult.innerHTML = `<em>${month}</em>`;
+        daysResult.innerHTML = `<em>${day}</em>`;
 
-        console.log(date, day2, month2, year2);
-        console.log(day1, month1, year1);
-        console.log(day, month, year);
+        console.log(date);
       }
 
       btn.addEventListener('click', () => {
-        ageCalc();
+        if (day1 === '' && (month1 === '') & (year1 === '')) {
+          allErrMsg.forEach((err) => {
+            err.innerText = 'This field is required';
+            err.classList.remove('hidden');
+          });
+        } else {
+          ageCalc();
+        }
       });
     </script>
   </body>
