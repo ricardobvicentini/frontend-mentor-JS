@@ -17,36 +17,42 @@
   <body>
     <section class="wrapper">
       <div class="input_wrapper">
-        <p class="date_text" for="day">Day</p>
-        <p class="date_text" for="month">Month</p>
-        <p class="date_text" for="year">Year</p>
-        <input
-          id="day_input"
-          type="number"
-          placeholder="DD"
-          required="required"
-          minlength="1"
-          maxlength="2"
-        />
-        <input
-          id="month_input"
-          type="number"
-          placeholder="MM"
-          required="required"
-          minlength="1"
-          maxlength="2"
-        />
-        <input
-          id="year_input"
-          type="number"
-          placeholder="YYYY"
-          required="required"
-          minlength="1"
-          maxlength="4"
-        />
-        <span class="error_message error_day hidden"><em>day</em></span>
-        <span class="error_message error_month hidden"><em>month</em></span>
-        <span class="error_message error_year hidden"><em>year</em></span>
+        <div class="day_wrapper">
+          <p class="date_text" for="day">Day</p>
+          <input
+            id="day_input"
+            type="number"
+            placeholder="DD"
+            required="required"
+            minlength="1"
+            maxlength="2"
+          />
+          <span class="error_message error_day"><em>day</em></span>
+        </div>
+        <div class="month_wrapper">
+          <p class="date_text" for="month">Month</p>
+          <input
+            id="month_input"
+            type="number"
+            placeholder="MM"
+            required="required"
+            minlength="1"
+            maxlength="2"
+          />
+          <span class="error_message error_month"><em>month</em></span>
+        </div>
+        <div class="year_wrapper">
+          <p class="date_text" for="year">Year</p>
+          <input
+            id="year_input"
+            type="number"
+            placeholder="YYYY"
+            required="required"
+            minlength="1"
+            maxlength="4"
+          />
+          <span class="error_message error_year"><em>year</em></span>
+        </div>
       </div>
       <div class="division">
         <img class="btn" src="assets/images/icon-arrow.svg" alt="Down arrow" />
@@ -115,9 +121,7 @@
         daysResult.innerHTML = `<em>${day}</em>`;
       }
 
-      btn.addEventListener('click', () => {
-        inputs.forEach((input) => {});
-      });
+      btn.addEventListener('click', () => {});
     </script>
   </body>
 </html>

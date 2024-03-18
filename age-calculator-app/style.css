@@ -27,7 +27,7 @@ img {
   /* Font size*/
   --fs-date: clamp(0.8rem, 3cqi, 1rem);
   --fs-input: clamp(1rem, 4cqi, 2rem);
-  --fs-error: clamp(0.6rem, 2cqi, 2rem);
+  --fs-error: clamp(0.7rem, 2cqi, 2rem);
   --fs-results: clamp(2.75rem, 16cqi, 4rem);
   /* Image width */
   --ws-img: clamp(5rem, 13cqi, 7rem);
@@ -52,11 +52,20 @@ body {
 }
 
 .input_wrapper {
+  border: 1px solid red;
   width: 80%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-row: repeat(3, 1fr);
-  gap: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.day_wrapper,
+.month_wrapper,
+.year_wrapper {
+  border: 1px solid red;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   input {
     min-width: 0;
     height: 4rem;
@@ -67,7 +76,6 @@ body {
     border: 1px solid var(--cl-light-grey);
     border-radius: 10px;
   }
-
   .error_message {
     color: var(--cl-light-red);
     font-size: var(--fs-error);
