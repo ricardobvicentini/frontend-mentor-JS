@@ -82,7 +82,7 @@
       const yearResult = document.querySelector('.year');
       const monthResult = document.querySelector('.month');
       const daysResult = document.querySelector('.days');
-      const allErrMsg = document.querySelectorAll('.error_message');
+      const allErrMsgs = document.querySelectorAll('.error_message');
       const btn = document.querySelector('.btn');
 
       function ageCalc() {
@@ -114,13 +114,13 @@
       }
 
       btn.addEventListener('click', () => {
-        if (day1 === '' && (month1 === '') & (year1 === '')) {
-          allErrMsg.forEach((err) => {
-            err.innerText = 'This field is required';
-            err.classList.remove('hidden');
+        if (day1 === '') {
+          allErrMsgs.forEach((err) => {
+            if (err.classList.contains('error_day')) {
+              err.innerHTML = '<em>This field is required</em>';
+              err.classList.remove('hidden');
+            }
           });
-        } else {
-          ageCalc();
         }
       });
     </script>
