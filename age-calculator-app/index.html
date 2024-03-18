@@ -79,9 +79,13 @@
       let day1 = document.getElementById('day_input').value;
       let month1 = document.getElementById('month_input').value;
       let year1 = document.getElementById('year_input').value;
+      let inputs = document.querySelectorAll('input');
       const yearResult = document.querySelector('.year');
       const monthResult = document.querySelector('.month');
       const daysResult = document.querySelector('.days');
+      const errDay = document.querySelector('.error_day');
+      const errMonth = document.querySelector('.error_month');
+      const errYear = document.querySelector('.error_year');
       const allErrMsgs = document.querySelectorAll('.error_message');
       const btn = document.querySelector('.btn');
 
@@ -109,19 +113,10 @@
         yearResult.innerHTML = `<em>${year}</em>`;
         monthResult.innerHTML = `<em>${month}</em>`;
         daysResult.innerHTML = `<em>${day}</em>`;
-
-        console.log(date);
       }
 
       btn.addEventListener('click', () => {
-        if (day1 === '') {
-          allErrMsgs.forEach((err) => {
-            if (err.classList.contains('error_day')) {
-              err.innerHTML = '<em>This field is required</em>';
-              err.classList.remove('hidden');
-            }
-          });
-        }
+        inputs.forEach((input) => {});
       });
     </script>
   </body>
