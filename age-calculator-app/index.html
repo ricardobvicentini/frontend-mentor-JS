@@ -27,7 +27,7 @@
             minlength="1"
             maxlength="2"
           />
-          <span class="error_message error_day"><em>day</em></span>
+          <span class="error_message error_day hidden"><em>day</em></span>
         </div>
         <div class="month_wrapper">
           <p class="date_text" for="month">Month</p>
@@ -39,7 +39,7 @@
             minlength="1"
             maxlength="2"
           />
-          <span class="error_message error_month"><em>month</em></span>
+          <span class="error_message error_month hidden"><em>month</em></span>
         </div>
         <div class="year_wrapper">
           <p class="date_text" for="year">Year</p>
@@ -51,7 +51,7 @@
             minlength="1"
             maxlength="4"
           />
-          <span class="error_message error_year"><em>year</em></span>
+          <span class="error_message error_year hidden"><em>year</em></span>
         </div>
       </div>
       <div class="division">
@@ -82,10 +82,7 @@
       </p>
     </div>
     <script>
-      let day1 = document.getElementById('day_input').value;
-      let month1 = document.getElementById('month_input').value;
-      let year1 = document.getElementById('year_input').value;
-      let inputs = document.querySelectorAll('input');
+      const inputs = document.querySelectorAll('input');
       const yearResult = document.querySelector('.year');
       const monthResult = document.querySelector('.month');
       const daysResult = document.querySelector('.days');
@@ -96,32 +93,60 @@
       const btn = document.querySelector('.btn');
 
       function ageCalc() {
-        let date = new Date();
-        let day2 = date.getDate();
-        let month2 = 1 + date.getMonth();
-        let year2 = date.getFullYear();
-        let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        inputs.forEach((input) => {
+          if (input.value) {
+            let day1 = document.getElementById('day_input').value;
+            let month1 = document.getElementById('month_input').value;
+            let year1 = document.getElementById('year_input').value;
+            let date = new Date();
+            let day2 = date.getDate();
+            let month2 = 1 + date.getMonth();
+            let year2 = date.getFullYear();
+            let monthLastDays = [
+              31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31,
+            ];
 
-        if (day1 > day2) {
-          day2 = day2 + monthLastDays[month2 - 1];
-          month2 = month2 - 1;
-        }
+            if (day1 > day2) {
+              day2 = day2 + monthLastDays[month2 - 1];
+              month2 = month2 - 1;
+            }
 
-        if (month1 > month2) {
-          month2 = month2 + 12;
-          year2 = year2 - 1;
-        }
+            if (month1 > month2) {
+              month2 = month2 + 12;
+              year2 = year2 - 1;
+            }
 
-        let day = day2 - day1;
-        let month = month2 - month1;
-        let year = year2 - year1;
+            let day = day2 - day1;
+            let month = month2 - month1;
+            let year = year2 - year1;
 
-        yearResult.innerHTML = `<em>${year}</em>`;
-        monthResult.innerHTML = `<em>${month}</em>`;
-        daysResult.innerHTML = `<em>${day}</em>`;
+            yearResult.innerHTML = `<em>${year}</em>`;
+            monthResult.innerHTML = `<em>${month}</em>`;
+            daysResult.innerHTML = `<em>${day}</em>`;
+          }
+        });
       }
 
-      btn.addEventListener('click', () => {});
+      function fieldRequired() {
+        inputs.forEach((input) => {
+          if (!input.value) {
+            input.style.borderColor = 'var(--cl-light-red)';
+            input.previousElementSibling.style.color = 'var(--cl-light-red)';
+            input.nextElementSibling.classList.remove('hidden');
+            input.nextElementSibling.innerHTML =
+              '<em>This field is required</em>';
+          } else {
+            input.style.borderColor = 'var(--cl-light-grey)';
+            input.previousElementSibling.style.color = 'var(--cl-smokey-grey)';
+            input.nextElementSibling.classList.add('hidden');
+          }
+        });
+      }
+
+      btn.addEventListener('click', () => {
+        ageCalc();
+        fieldRequired();
+      });
     </script>
   </body>
 </html>
