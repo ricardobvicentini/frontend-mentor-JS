@@ -89,6 +89,7 @@
       const btn = document.querySelector('.btn');
 
       function ageCalc() {
+        fieldRequired();
         let day1 = document.getElementById('day_input');
         let month1 = document.getElementById('month_input');
         let year1 = document.getElementById('year_input');
@@ -98,29 +99,7 @@
         let year2 = date.getFullYear();
         let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-        fieldRequired();
-
-        if (day1.value > 31) {
-          day1.style.borderColor = 'var(--cl-light-red)';
-          day1.previousElementSibling.style.color = 'var(--cl-light-red)';
-          day1.nextElementSibling.classList.remove('hidden');
-          day1.nextElementSibling.innerHTML = '<em>Must be a valid day</em>';
-        }
-
-        if (month1.value > 12) {
-          month1.style.borderColor = 'var(--cl-light-red)';
-          month1.previousElementSibling.style.color = 'var(--cl-light-red)';
-          month1.nextElementSibling.classList.remove('hidden');
-          month1.nextElementSibling.innerHTML =
-            '<em>Must be a valid month</em>';
-        }
-
-        if (year1.value > year2) {
-          year1.style.borderColor = 'var(--cl-light-red)';
-          year1.previousElementSibling.style.color = 'var(--cl-light-red)';
-          year1.nextElementSibling.classList.remove('hidden');
-          year1.nextElementSibling.innerHTML = '<em>Must be in the past</em>';
-        }
+        invalidDate(day1, month1, year1);
 
         if (day1.value > day2) {
           day2 = day2 + monthLastDays[month2 - 1];
@@ -139,6 +118,29 @@
         yearResult.innerHTML = `<em>${year}</em>`;
         monthResult.innerHTML = `<em>${month}</em>`;
         daysResult.innerHTML = `<em>${day}</em>`;
+      }
+
+      function invalidDate(d, m, y) {
+        if (d.value > 31) {
+          d.style.borderColor = 'var(--cl-light-red)';
+          d.previousElementSibling.style.color = 'var(--cl-light-red)';
+          d.nextElementSibling.classList.remove('hidden');
+          d.nextElementSibling.innerHTML = '<em>Must be a valid day</em>';
+        }
+
+        if (m.value > 12) {
+          m.style.borderColor = 'var(--cl-light-red)';
+          m.previousElementSibling.style.color = 'var(--cl-light-red)';
+          m.nextElementSibling.classList.remove('hidden');
+          m.nextElementSibling.innerHTML = '<em>Must be a valid month</em>';
+        }
+
+        if (y.value > year2) {
+          y.style.borderColor = 'var(--cl-light-red)';
+          y.previousElementSibling.style.color = 'var(--cl-light-red)';
+          y.nextElementSibling.classList.remove('hidden');
+          y.nextElementSibling.innerHTML = '<em>Must be in the past</em>';
+        }
       }
 
       function fieldRequired() {
