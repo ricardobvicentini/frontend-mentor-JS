@@ -99,7 +99,7 @@
         let year2 = date.getFullYear();
         let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-        invalidDate(day1, month1, year1);
+        invalidDate(day1, month1, year1, year2);
 
         if (day1.value > day2) {
           day2 = day2 + monthLastDays[month2 - 1];
@@ -120,7 +120,7 @@
         daysResult.innerHTML = `<em>${day}</em>`;
       }
 
-      function invalidDate(d, m, y) {
+      function invalidDate(d, m, y, y2) {
         if (d.value > 31) {
           d.style.borderColor = 'var(--cl-light-red)';
           d.previousElementSibling.style.color = 'var(--cl-light-red)';
@@ -135,7 +135,7 @@
           m.nextElementSibling.innerHTML = '<em>Must be a valid month</em>';
         }
 
-        if (y.value > year2) {
+        if (y.value > y2) {
           y.style.borderColor = 'var(--cl-light-red)';
           y.previousElementSibling.style.color = 'var(--cl-light-red)';
           y.nextElementSibling.classList.remove('hidden');
