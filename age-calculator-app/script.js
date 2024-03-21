@@ -15,6 +15,7 @@ let year2 = date.getFullYear();
 let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 function ageCalc() {
+  fieldRequired();
   invalidDate(day1, month1, year1, year2);
   if (day1.value > day2) {
     day2 = day2 + monthLastDays[month2 - 1];
@@ -74,11 +75,5 @@ function fieldRequired() {
 }
 
 btn.addEventListener('click', () => {
-  inputs.forEach((input) => {
-    if (!input.value) {
-      fieldRequired();
-    } else {
-      ageCalc();
-    }
-  });
+  ageCalc();
 });
