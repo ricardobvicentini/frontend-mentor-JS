@@ -5,20 +5,17 @@ const yearResult = document.querySelector('.year');
 const monthResult = document.querySelector('.month');
 const daysResult = document.querySelector('.days');
 const btn = document.querySelector('.btn');
+let day1 = document.getElementById('day_input');
+let month1 = document.getElementById('month_input');
+let year1 = document.getElementById('year_input');
+let date = new Date();
+let day2 = date.getDate();
+let month2 = 1 + date.getMonth();
+let year2 = date.getFullYear();
+let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 function ageCalc() {
-  fieldRequired();
-  let day1 = document.getElementById('day_input');
-  let month1 = document.getElementById('month_input');
-  let year1 = document.getElementById('year_input');
-  let date = new Date();
-  let day2 = date.getDate();
-  let month2 = 1 + date.getMonth();
-  let year2 = date.getFullYear();
-  let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
   invalidDate(day1, month1, year1, year2);
-
   if (day1.value > day2) {
     day2 = day2 + monthLastDays[month2 - 1];
     month2 = month2 - 1;
@@ -77,5 +74,11 @@ function fieldRequired() {
 }
 
 btn.addEventListener('click', () => {
-  ageCalc();
+  inputs.forEach((input) => {
+    if (!input.value) {
+      fieldRequired();
+    } else {
+      ageCalc();
+    }
+  });
 });
