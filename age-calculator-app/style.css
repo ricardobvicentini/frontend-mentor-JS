@@ -52,7 +52,6 @@ body {
 }
 
 .input_wrapper {
-  border: 1px solid red;
   width: 80%;
   display: flex;
   gap: 2rem;
@@ -61,7 +60,6 @@ body {
 .day_wrapper,
 .month_wrapper,
 .year_wrapper {
-  border: 1px solid red;
   width: 30%;
   display: flex;
   flex-direction: column;
