@@ -55,15 +55,14 @@ function invalidDate() {
     year1.nextElementSibling.classList.remove('hidden');
     year1.nextElementSibling.innerHTML = '<em>Must be in the past</em>';
   }
+  if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
+    ageCalc();
+  }
 }
 
 function fieldRequired() {
   inputs.forEach((input) => {
-    input.style.borderColor = 'var(--cl-light-red)';
-    input.previousElementSibling.style.color = 'var(--cl-light-red)';
-    input.nextElementSibling.classList.remove('hidden');
-    input.nextElementSibling.innerHTML = '<em>This field is required</em>';
-    /* if (!input.value) {
+    if (!input.value) {
       input.style.borderColor = 'var(--cl-light-red)';
       input.previousElementSibling.style.color = 'var(--cl-light-red)';
       input.nextElementSibling.classList.remove('hidden');
@@ -72,13 +71,11 @@ function fieldRequired() {
       input.style.borderColor = 'var(--cl-light-grey)';
       input.previousElementSibling.style.color = 'var(--cl-smokey-grey)';
       input.nextElementSibling.classList.add('hidden');
-    } */
+      invalidDate();
+    }
   });
 }
 
 btn.addEventListener('click', () => {
-  if (inputs.value) {
-    console.log('value');
-    ageCalc();
-  }
+  fieldRequired();
 });
