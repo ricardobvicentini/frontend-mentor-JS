@@ -77,5 +77,9 @@ function fieldRequired() {
 }
 
 btn.addEventListener('click', () => {
-  fieldRequired();
+  /* fieldRequired(); */
+  /* const dateInput = `${year1.value}, ${month1.value}, ${day1.value}`; */
+  const dateInput = `2001/06/31`;
+  const testDate = new Date(dateInput);
+  console.log(testDate);
 });
