@@ -34,6 +34,13 @@ function ageCalc() {
   daysResult.innerHTML = `<em>${day}</em>`;
 }
 
+function checkValidDate() {
+  /* const dateInput = `${year1.value}, ${month1.value}, ${day1.value}`; */
+  const dateInput = `2001/06/31`;
+  const testDate = new Date(dateInput);
+  console.log(testDate);
+}
+
 function invalidDate() {
   if (day1.value > 31) {
     day1.style.borderColor = 'var(--cl-light-red)';
@@ -77,9 +84,5 @@ function fieldRequired() {
 }
 
 btn.addEventListener('click', () => {
-  /* fieldRequired(); */
-  /* const dateInput = `${year1.value}, ${month1.value}, ${day1.value}`; */
-  const dateInput = `2001/06/31`;
-  const testDate = new Date(dateInput);
-  console.log(testDate);
+  fieldRequired();
 });
