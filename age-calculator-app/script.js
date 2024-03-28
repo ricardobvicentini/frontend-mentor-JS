@@ -36,10 +36,13 @@ function ageCalc() {
 
 /* Existing date */
 
-function daysInMonth(m, y) {
-  switch (m) {
+function daysInMonth() {
+  switch (month1.value) {
     case 1:
-      return (y % 4 == 0 && y % 100) || y % 400 == 0 ? 29 : 28;
+      return (year1.value % 4 == 0 && year1.value % 100) ||
+        year1.value % 400 == 0
+        ? 29
+        : 28;
     case 8:
     case 3:
     case 5:
@@ -50,10 +53,15 @@ function daysInMonth(m, y) {
   }
 }
 
-isValidDate = function (d, m, y) {
-  m = parseInt(m, 10) - 1;
-  return m >= 0 && m < 12 && d > 0 && d <= daysInMonth(m, y);
-};
+function isValidDate() {
+  month1.value = parseInt(month1.value, 10) - 1;
+  return (
+    month1.value >= 0 &&
+    month1.value < 12 &&
+    day1.value > 0 &&
+    day1.value <= daysInMonth()
+  );
+}
 
 /* --------------- */
 
