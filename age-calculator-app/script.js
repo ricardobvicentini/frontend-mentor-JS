@@ -54,13 +54,9 @@ function daysInMonth() {
 }
 
 function isValidDate() {
-  month1.value = parseInt(month1.value, 10) - 1;
-  return (
-    month1.value >= 0 &&
-    month1.value < 12 &&
-    day1.value > 0 &&
-    day1.value <= daysInMonth()
-  );
+  let m = month1.value;
+  m = parseInt(m, 10) - 1;
+  return m >= 0 && m < 12 && day1.value > 0 && day1.value <= daysInMonth();
 }
 
 /* --------------- */
@@ -86,6 +82,9 @@ function invalidDate() {
     year1.nextElementSibling.classList.remove('hidden');
     year1.nextElementSibling.innerHTML = '<em>Must be in the past</em>';
   }
+  /* if (!isValidDate()) {
+    console.log('invalid');
+  } */
   if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
     ageCalc();
   }
