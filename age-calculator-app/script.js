@@ -14,7 +14,7 @@ let month2 = 1 + date.getMonth();
 let year2 = date.getFullYear();
 let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-function ageCalc() {
+/* function ageCalc() {
   if (day1.value > day2) {
     day2 = day2 + monthLastDays[month2 - 1];
     month2 = month2 - 1;
@@ -32,7 +32,7 @@ function ageCalc() {
   yearResult.innerHTML = `<em>${year}</em>`;
   monthResult.innerHTML = `<em>${month}</em>`;
   daysResult.innerHTML = `<em>${day}</em>`;
-}
+} */
 
 /* Existing date */
 
@@ -53,19 +53,14 @@ function daysInMonth() {
   }
 }
 
-function isValidDate() {
-  month1.value = parseInt(month1.value, 10) - 1;
-  return (
-    month1.value >= 0 &&
-    month1.value < 12 &&
-    day1.value > 0 &&
-    day1.value <= daysInMonth()
-  );
+function isValidDate(m, d) {
+  m = parseInt(m, 10) - 1;
+  return m >= 0 && m < 12 && d > 0 && d <= daysInMonth();
 }
 
 /* --------------- */
 
-function invalidDate() {
+/* function invalidDate() {
   if (day1.value > 31) {
     day1.style.borderColor = 'var(--cl-light-red)';
     day1.previousElementSibling.style.color = 'var(--cl-light-red)';
@@ -106,8 +101,12 @@ function fieldRequired() {
       invalidDate();
     }
   });
-}
+} */
 
 btn.addEventListener('click', () => {
-  fieldRequired();
+  /* fieldRequired(); */
+
+  if (isValidDate(month1.value, day1.value)) {
+    console.log('invalid');
+  }
 });
