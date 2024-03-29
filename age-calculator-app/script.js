@@ -14,7 +14,7 @@ let month2 = 1 + date.getMonth();
 let year2 = date.getFullYear();
 let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-/* function ageCalc() {
+function ageCalc() {
   if (day1.value > day2) {
     day2 = day2 + monthLastDays[month2 - 1];
     month2 = month2 - 1;
@@ -32,7 +32,7 @@ let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   yearResult.innerHTML = `<em>${year}</em>`;
   monthResult.innerHTML = `<em>${month}</em>`;
   daysResult.innerHTML = `<em>${day}</em>`;
-} */
+}
 
 /* Existing date */
 
@@ -60,7 +60,7 @@ function isValidDate(m, d) {
 
 /* --------------- */
 
-/* function invalidDate() {
+function invalidDate() {
   if (day1.value > 31) {
     day1.style.borderColor = 'var(--cl-light-red)';
     day1.previousElementSibling.style.color = 'var(--cl-light-red)';
@@ -101,23 +101,17 @@ function fieldRequired() {
       invalidDate();
     }
   });
-} */
+}
 
 btn.addEventListener('click', () => {
-  /* fieldRequired(); */
-
   if (isValidDate(month1.value, day1.value)) {
     console.log('invalid');
     inputs.forEach((input) => {
-      if (input.value) {
-        input.style.borderColor = 'var(--cl-light-red)';
-        input.previousElementSibling.style.color = 'var(--cl-light-red)';
-        input.nextElementSibling.classList.remove('hidden');
-      } else {
-        input.style.borderColor = 'var(--cl-light-grey)';
-        input.previousElementSibling.style.color = 'var(--cl-smokey-grey)';
-        input.nextElementSibling.classList.add('hidden');
-      }
+      input.style.borderColor = 'var(--cl-light-red)';
+      input.previousElementSibling.style.color = 'var(--cl-light-red)';
+      input.nextElementSibling.classList.remove('hidden');
     });
+  } else {
+    fieldRequired();
   }
 });
