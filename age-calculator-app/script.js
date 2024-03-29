@@ -81,18 +81,25 @@ function invalidDate() {
   }
 
   if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
-    /* ageCalc(); */
+    ageCalc();
   }
 }
 
 function fieldRequired() {
   inputs.forEach((input) => {
+    if (!isValidDate(month1.value, day1.value, year1.value)) {
+      console.log('invalid');
+      input.style.borderColor = 'var(--cl-light-red)';
+      input.previousElementSibling.style.color = 'var(--cl-light-red)';
+      input.nextElementSibling.classList.remove('hidden');
+    }
     if (!input.value) {
       input.style.borderColor = 'var(--cl-light-red)';
       input.previousElementSibling.style.color = 'var(--cl-light-red)';
       input.nextElementSibling.classList.remove('hidden');
       input.nextElementSibling.innerHTML = '<em>This field is required</em>';
-    } else {
+    }
+    if (isValidDate(month1.value, day1.value, year1.value)) {
       input.style.borderColor = 'var(--cl-light-grey)';
       input.previousElementSibling.style.color = 'var(--cl-smokey-grey)';
       input.nextElementSibling.classList.add('hidden');
@@ -102,8 +109,5 @@ function fieldRequired() {
 }
 
 btn.addEventListener('click', () => {
-  if (!isValidDate(month1.value, day1.value, year1.value)) {
-    console.log('invalid');
-  }
-  /* fieldRequired(); */
+  fieldRequired();
 });
