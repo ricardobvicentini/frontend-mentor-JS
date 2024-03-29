@@ -36,13 +36,10 @@ function ageCalc() {
 
 /* Existing date */
 
-function daysInMonth() {
-  switch (month1.value) {
-    case 1:
-      return (year1.value % 4 == 0 && year1.value % 100) ||
-        year1.value % 400 == 0
-        ? 29
-        : 28;
+function daysInMonth(year, month) {
+  switch (parseInt(month, 10)) {
+    case 2: // February
+      return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? 29 : 28;
     case 8:
     case 3:
     case 5:
@@ -53,9 +50,10 @@ function daysInMonth() {
   }
 }
 
-function isValidDate(m, d) {
+function isValidDate(m, d, y) {
   m = parseInt(m, 10) - 1;
-  return m >= 0 && m < 12 && d > 0 && d <= daysInMonth();
+  let daysInGivenMonth = daysInMonth(year1.value, m + 1);
+  return m >= 0 && m < 12 && d > 0 && d <= daysInGivenMonth;
 }
 
 /* --------------- */
@@ -83,7 +81,7 @@ function invalidDate() {
   }
 
   if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
-    ageCalc();
+    /* ageCalc(); */
   }
 }
 
@@ -104,14 +102,8 @@ function fieldRequired() {
 }
 
 btn.addEventListener('click', () => {
-  if (isValidDate(month1.value, day1.value)) {
+  if (!isValidDate(month1.value, day1.value, year1.value)) {
     console.log('invalid');
-    inputs.forEach((input) => {
-      input.style.borderColor = 'var(--cl-light-red)';
-      input.previousElementSibling.style.color = 'var(--cl-light-red)';
-      input.nextElementSibling.classList.remove('hidden');
-    });
-  } else {
-    fieldRequired();
   }
+  /* fieldRequired(); */
 });
