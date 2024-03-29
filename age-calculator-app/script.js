@@ -108,5 +108,16 @@ btn.addEventListener('click', () => {
 
   if (isValidDate(month1.value, day1.value)) {
     console.log('invalid');
+    inputs.forEach((input) => {
+      if (input.value) {
+        input.style.borderColor = 'var(--cl-light-red)';
+        input.previousElementSibling.style.color = 'var(--cl-light-red)';
+        input.nextElementSibling.classList.remove('hidden');
+      } else {
+        input.style.borderColor = 'var(--cl-light-grey)';
+        input.previousElementSibling.style.color = 'var(--cl-smokey-grey)';
+        input.nextElementSibling.classList.add('hidden');
+      }
+    });
   }
 });
