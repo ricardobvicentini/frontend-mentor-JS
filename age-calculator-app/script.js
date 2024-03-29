@@ -83,6 +83,9 @@ function invalidDate() {
   if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
     if (!isValidDate(month1.value, day1.value, year1.value)) {
       console.log('invalid');
+      yearResult.innerHTML = `<em>--</em>`;
+      monthResult.innerHTML = `<em>--</em>`;
+      daysResult.innerHTML = `<em>--</em>`;
     } else {
       ageCalc();
     }
