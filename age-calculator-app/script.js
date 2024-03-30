@@ -14,6 +14,12 @@ let month2 = 1 + date.getMonth();
 let year2 = date.getFullYear();
 let monthLastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+function clearResult() {
+  yearResult.innerHTML = `<em>--</em>`;
+  monthResult.innerHTML = `<em>--</em>`;
+  daysResult.innerHTML = `<em>--</em>`;
+}
+
 function ageCalc() {
   if (day1.value > day2) {
     day2 = day2 + monthLastDays[month2 - 1];
@@ -32,12 +38,6 @@ function ageCalc() {
   yearResult.innerHTML = `<em>${year}</em>`;
   monthResult.innerHTML = `<em>${month}</em>`;
   daysResult.innerHTML = `<em>${day}</em>`;
-
-  inputs.forEach((input) => {
-    input.style.borderColor = 'var(--cl-light-grey)';
-    input.previousElementSibling.style.color = 'var(--cl-smokey-grey)';
-    input.nextElementSibling.classList.add('hidden');
-  });
 }
 
 /* Existing date */
@@ -70,6 +70,7 @@ function invalidDate() {
     day1.previousElementSibling.style.color = 'var(--cl-light-red)';
     day1.nextElementSibling.classList.remove('hidden');
     day1.nextElementSibling.innerHTML = '<em>Must be a valid day</em>';
+    clearResult();
   }
 
   if (month1.value > 12) {
@@ -77,6 +78,7 @@ function invalidDate() {
     month1.previousElementSibling.style.color = 'var(--cl-light-red)';
     month1.nextElementSibling.classList.remove('hidden');
     month1.nextElementSibling.innerHTML = '<em>Must be a valid month</em>';
+    clearResult();
   }
 
   if (year1.value > year2) {
@@ -84,19 +86,18 @@ function invalidDate() {
     year1.previousElementSibling.style.color = 'var(--cl-light-red)';
     year1.nextElementSibling.classList.remove('hidden');
     year1.nextElementSibling.innerHTML = '<em>Must be in the past</em>';
+    clearResult();
   }
 
   if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
     if (!isValidDate(month1.value, day1.value, year1.value)) {
       console.log('invalid');
-      yearResult.innerHTML = `<em>--</em>`;
-      monthResult.innerHTML = `<em>--</em>`;
-      daysResult.innerHTML = `<em>--</em>`;
       inputs.forEach((input) => {
         input.style.borderColor = 'var(--cl-light-red)';
         input.previousElementSibling.style.color = 'var(--cl-light-red)';
         input.nextElementSibling.classList.remove('hidden');
       });
+      clearResult();
     } else {
       ageCalc();
     }
