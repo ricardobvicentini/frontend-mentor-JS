@@ -32,6 +32,12 @@ function ageCalc() {
   yearResult.innerHTML = `<em>${year}</em>`;
   monthResult.innerHTML = `<em>${month}</em>`;
   daysResult.innerHTML = `<em>${day}</em>`;
+
+  inputs.forEach((input) => {
+    input.style.borderColor = 'var(--cl-light-grey)';
+    input.previousElementSibling.style.color = 'var(--cl-smokey-grey)';
+    input.nextElementSibling.classList.add('hidden');
+  });
 }
 
 /* Existing date */
@@ -86,6 +92,11 @@ function invalidDate() {
       yearResult.innerHTML = `<em>--</em>`;
       monthResult.innerHTML = `<em>--</em>`;
       daysResult.innerHTML = `<em>--</em>`;
+      inputs.forEach((input) => {
+        input.style.borderColor = 'var(--cl-light-red)';
+        input.previousElementSibling.style.color = 'var(--cl-light-red)';
+        input.nextElementSibling.classList.remove('hidden');
+      });
     } else {
       ageCalc();
     }
