@@ -20,6 +20,14 @@ function clearResult() {
   daysResult.innerHTML = `<em>--</em>`;
 }
 
+function clearInput() {
+  inputs.forEach((input) => {
+    input.style.borderColor = 'var(--cl-light-grey)';
+    input.previousElementSibling.style.color = 'var(--cl-smokey-grey)';
+    input.nextElementSibling.classList.add('hidden');
+  });
+}
+
 function ageCalc() {
   if (day1.value > day2) {
     day2 = day2 + monthLastDays[month2 - 1];
@@ -58,13 +66,27 @@ function daysInMonth(year, month) {
 
 function isValidDate(m, d, y) {
   m = parseInt(m, 10) - 1;
-  let daysInGivenMonth = daysInMonth(year1.value, m + 1);
+  let daysInGivenMonth = daysInMonth(y, m + 1);
   return m >= 0 && m < 12 && d > 0 && d <= daysInGivenMonth;
 }
 
 /* --------------- */
 
 function invalidDate() {
+  if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
+    if (!isValidDate(month1.value, day1.value, year1.value)) {
+      console.log('invalid');
+      inputs.forEach((input) => {
+        input.style.borderColor = 'var(--cl-light-red)';
+        input.previousElementSibling.style.color = 'var(--cl-light-red)';
+        input.nextElementSibling.classList.remove('hidden');
+      });
+      clearResult();
+    } else {
+      ageCalc();
+    }
+  }
+
   if (day1.value > 31) {
     day1.style.borderColor = 'var(--cl-light-red)';
     day1.previousElementSibling.style.color = 'var(--cl-light-red)';
@@ -88,20 +110,6 @@ function invalidDate() {
     year1.nextElementSibling.innerHTML = '<em>Must be in the past</em>';
     clearResult();
   }
-
-  if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
-    if (!isValidDate(month1.value, day1.value, year1.value)) {
-      console.log('invalid');
-      inputs.forEach((input) => {
-        input.style.borderColor = 'var(--cl-light-red)';
-        input.previousElementSibling.style.color = 'var(--cl-light-red)';
-        input.nextElementSibling.classList.remove('hidden');
-      });
-      clearResult();
-    } else {
-      ageCalc();
-    }
-  }
 }
 
 function fieldRequired() {
@@ -112,9 +120,7 @@ function fieldRequired() {
       input.nextElementSibling.classList.remove('hidden');
       input.nextElementSibling.innerHTML = '<em>This field is required</em>';
     } else {
-      input.style.borderColor = 'var(--cl-light-grey)';
-      input.previousElementSibling.style.color = 'var(--cl-smokey-grey)';
-      input.nextElementSibling.classList.add('hidden');
+      clearInput();
       invalidDate();
     }
   });
