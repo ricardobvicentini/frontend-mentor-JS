@@ -73,20 +73,6 @@ function isValidDate(m, d, y) {
 /* --------------- */
 
 function invalidDate() {
-  if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
-    if (!isValidDate(month1.value, day1.value, year1.value)) {
-      console.log('invalid');
-      inputs.forEach((input) => {
-        input.style.borderColor = 'var(--cl-light-red)';
-        input.previousElementSibling.style.color = 'var(--cl-light-red)';
-        input.nextElementSibling.classList.remove('hidden');
-      });
-      clearResult();
-    } else {
-      ageCalc();
-    }
-  }
-
   if (day1.value > 31) {
     day1.style.borderColor = 'var(--cl-light-red)';
     day1.previousElementSibling.style.color = 'var(--cl-light-red)';
@@ -109,6 +95,20 @@ function invalidDate() {
     year1.nextElementSibling.classList.remove('hidden');
     year1.nextElementSibling.innerHTML = '<em>Must be in the past</em>';
     clearResult();
+  }
+
+  if (day1.value <= 31 && month1.value <= 12 && year1.value <= year2) {
+    clearResult();
+    if (!isValidDate(month1.value, day1.value, year1.value)) {
+      console.log('invalid');
+      inputs.forEach((input) => {
+        input.style.borderColor = 'var(--cl-light-red)';
+        input.previousElementSibling.style.color = 'var(--cl-light-red)';
+        input.nextElementSibling.classList.remove('hidden');
+      });
+    } else {
+      ageCalc();
+    }
   }
 }
 
