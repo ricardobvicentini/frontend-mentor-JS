@@ -131,25 +131,14 @@
     </div>
 
     <script>
-      const icons = document.querySelectorAll('.icons');
-      const pars = document.querySelectorAll('.text');
-
-      icons.forEach((icon) => {
-        icon.addEventListener('click', (e) => {
+      document.querySelectorAll('.icons').forEach((icon) => {
+        icon.onclick = () => {
           icon.children[0].classList.toggle('hidden');
           icon.children[1].classList.toggle('hidden');
-          for (let i = 0; i < icons.length; i++) {
-            if (e.currentTarget !== icons[i]) {
-              icons[i].children[0].classList.remove('hidden');
-              icons[i].children[1].classList.add('hidden');
-            }
-          }
-          const nextPar = icon.closest('.accordion').lastElementChild;
-          nextPar.classList.toggle('hidden');
-          pars.forEach((par) => {
-            if (par !== nextPar) par.classList.add('hidden');
-          });
-        });
+          icon
+            .closest('.accordion')
+            .lastElementChild.classList.toggle('hidden');
+        };
       });
     </script>
   </body>
