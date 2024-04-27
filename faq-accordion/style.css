@@ -111,6 +111,7 @@ h2:hover {
 }
 
 .accordion {
+  position: relative;
   min-width: 100%;
   display: flex;
   flex-direction: column;
@@ -125,14 +126,23 @@ h2:hover {
   gap: 5%;
 }
 
-p {
-  line-height: 1.5;
-  font-size: 0.9rem;
-  color: var(--cl-light-purple);
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 600ms ease-in-out;
+  & p {
+    line-height: 1.5;
+    font-size: 0.9rem;
+    color: var(--cl-light-purple);
+  }
 }
 
 .hidden {
   display: none;
+}
+
+.show {
+  max-height: 300px;
 }
 
 .attribution {
