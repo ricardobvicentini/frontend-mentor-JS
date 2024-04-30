@@ -54,10 +54,6 @@ p {
 }
 
 /* Header */
-
-.header {
-}
-
 .header__logo {
   width: 2.81rem;
 }
@@ -77,7 +73,6 @@ li {
 }
 
 /* Medias */
-
 @media (width >= 69.37em) {
   .header__logo {
     width: 4rem;
