@@ -51,8 +51,7 @@ body {
   --cl-shadow: hsla(293, 16%, 49%, 0.233);
 
   width: min(38rem, calc(100% - 3.5rem));
-  padding-block: 2.5rem 1rem;
-  padding-inline: 2rem;
+  padding: 1rem 2.7rem;
   border-radius: 15px;
   background-color: var(--cl-white);
   box-shadow: 0 15px 50px 20px var(--cl-shadow);
@@ -61,6 +60,9 @@ body {
   align-items: center;
   gap: 1rem;
   z-index: 2;
+  @media screen and (width < 23.43em) {
+    border-radius: 10px;
+  }
 }
 
 .questions {
@@ -78,14 +80,17 @@ body {
 
 .title {
   width: 100%;
+  padding-block: 1.5rem;
   display: flex;
+  gap: 5%;
   & h1 {
     font-size: clamp(2rem, 1.647887323943662rem + 1.5023474178403755vw, 3rem);
-    margin-left: 1.25rem;
     color: var(--cl-dark-purple);
+    font-size: 3.5rem;
   }
   & .star-icon {
     width: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem);
+    width: 2.5rem;
   }
 }
 
@@ -122,7 +127,6 @@ h2 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: calc(1.5rem - 1px);
-    gap: 5%;
   }
 }
 
@@ -132,7 +136,13 @@ h2 {
   transition: max-height 300ms ease-in-out, margin-bottom 300ms ease-in-out;
   & p {
     line-height: 1.5;
+    /* font-size: clamp(
+      0.8rem,
+      0.7119718309859155rem + 0.3755868544600939vw,
+      1.05rem
+    ); */
     font-size: clamp(0.8rem, 0.7295774647887324rem + 0.300469483568075vw, 1rem);
+    text-align: left;
     color: var(--cl-light-purple);
   }
 }
