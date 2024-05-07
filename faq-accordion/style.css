@@ -31,14 +31,14 @@ body {
   position: relative;
   font-family: 'Work Sans', sans-serif;
   background-color: var(--cl-pink);
-  display: grid;
+  /* display: grid;
   grid-template-rows: 1fr 3rem;
-  place-items: center;
+  place-items: center; */
   overflow-x: clip;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 }
 
 .background {
@@ -58,9 +58,11 @@ body {
 
 .wrapper {
   --cl-shadow: hsla(293, 16%, 49%, 0.233);
-  border: 1px solid red;
+
+  /* position: absolute;
+  inset: 0;
+  margin: auto; */
   width: min(35rem, calc(100% - 4rem));
-  height: 33rem;
   padding: 2rem;
   border-radius: 15px;
   background-color: var(--cl-white);
@@ -75,15 +77,18 @@ body {
 
 .questions {
   width: 100%;
-  height: calc(33rem - 3.375rem);
+  /* height: calc(33rem - 3.375rem); */
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  border: 1px solid red;
+  justify-content: space-between;
 }
 
 .questions > :not(:last-child) {
   border-bottom: 1px solid var(--cl-pink);
+}
+
+.questions .accordion:not(:first-child) {
+  margin-top: 2rem;
 }
 
 .title {
@@ -109,11 +114,13 @@ body {
 h1 {
   font-size: 2.75rem;
   margin-left: 1.25rem;
+
   color: var(--cl-dark-purple);
 }
 
 h2 {
   font-size: 1rem;
+
   color: var(--cl-dark-purple);
   cursor: pointer;
 }
@@ -123,14 +130,13 @@ h2:hover {
 }
 
 .accordion {
-  border: 1px solid red;
   position: relative;
   min-width: 100%;
-
+  /* height: 25%; */
   display: flex;
   flex-direction: column;
   /* padding-block: 2rem; */
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 .accordion-title {
@@ -138,12 +144,13 @@ h2:hover {
   justify-content: space-between;
   align-items: center;
   gap: 5%;
+  margin-bottom: 2rem;
 }
 
 .content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 600ms ease-in-out;
+  transition: max-height 300ms ease-in-out;
   & p {
     line-height: 1.5;
     font-size: 0.9rem;
@@ -162,8 +169,8 @@ h2:hover {
 .attribution {
   width: 100%;
   height: 3rem;
-  /*   position: fixed;
-  bottom: 0; */
+  position: fixed;
+  bottom: 0;
   align-self: end;
   display: flex;
   justify-content: center;
