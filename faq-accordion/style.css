@@ -34,17 +34,17 @@ body {
 
 .background {
   width: 100%;
-  height: clamp(
-    16.875rem,
-    16.214788732394368rem + 2.8169014084507045vw,
-    18.75rem
-  );
+  height: 20rem;
   background-image: url(assets/images/background-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   position: fixed;
   top: 0;
+  @media screen and (width < 23.44em) {
+    height: 14.5rem;
+    background-image: url(assets/images/background-pattern-mobile.svg);
+  }
 }
 
 .wrapper {
@@ -60,8 +60,9 @@ body {
   align-items: center;
   gap: 1rem;
   z-index: 2;
-  @media screen and (width < 23.43em) {
+  @media screen and (width < 23.44em) {
     border-radius: 10px;
+    padding: 0.5rem 2rem;
   }
 }
 
@@ -86,11 +87,9 @@ body {
   & h1 {
     font-size: clamp(2rem, 1.647887323943662rem + 1.5023474178403755vw, 3rem);
     color: var(--cl-dark-purple);
-    font-size: 3.5rem;
   }
   & .star-icon {
     width: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem);
-    width: 2.5rem;
   }
 }
 
