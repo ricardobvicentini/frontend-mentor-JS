@@ -27,7 +27,8 @@ body {
   background-color: var(--cl-pink);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
   overflow-x: clip;
 }
@@ -39,7 +40,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  position: fixed;
+  position: absolute;
   top: 0;
   @media screen and (width < 23.44em) {
     height: 14.5rem;
@@ -51,18 +52,36 @@ body {
   --cl-shadow: hsla(293, 16%, 49%, 0.233);
 
   width: min(38rem, calc(100% - 3.5rem));
-  padding: 1rem 2.7rem;
+  padding: 1rem 2.5rem;
+  margin-top: calc(20rem - 9.56rem);
   border-radius: 15px;
   background-color: var(--cl-white);
   box-shadow: 0 15px 50px 20px var(--cl-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   z-index: 2;
   @media screen and (width < 23.44em) {
-    border-radius: 10px;
+    margin-top: calc(14.5rem - 6rem);
     padding: 0.5rem 2rem;
+    border-radius: 10px;
+  }
+}
+
+.title {
+  width: 100%;
+  padding-block: 2rem;
+  display: flex;
+  gap: 5%;
+  & h1 {
+    font-size: clamp(2rem, 1.647887323943662rem + 1.5023474178403755vw, 3rem);
+    color: var(--cl-dark-purple);
+  }
+  & .star-icon {
+    width: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem);
+  }
+  @media screen and (width < 23.44em) {
+    padding-block: 1.5rem;
   }
 }
 
@@ -76,20 +95,6 @@ body {
   }
   & .accordion:not(:first-child) {
     margin-top: 1.5rem;
-  }
-}
-
-.title {
-  width: 100%;
-  padding-block: 1.5rem;
-  display: flex;
-  gap: 5%;
-  & h1 {
-    font-size: clamp(2rem, 1.647887323943662rem + 1.5023474178403755vw, 3rem);
-    color: var(--cl-dark-purple);
-  }
-  & .star-icon {
-    width: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem);
   }
 }
 
@@ -135,11 +140,6 @@ h2 {
   transition: max-height 300ms ease-in-out, margin-bottom 300ms ease-in-out;
   & p {
     line-height: 1.5;
-    /* font-size: clamp(
-      0.8rem,
-      0.7119718309859155rem + 0.3755868544600939vw,
-      1.05rem
-    ); */
     font-size: clamp(0.8rem, 0.7295774647887324rem + 0.300469483568075vw, 1rem);
     text-align: left;
     color: var(--cl-light-purple);
@@ -158,9 +158,10 @@ h2 {
 .attribution {
   width: fit-content;
   padding: 1rem 4rem;
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
   align-self: center;
+  justify-self: end;
   display: flex;
   justify-content: center;
   align-items: center;
