@@ -16,6 +16,18 @@
   --cl-light-purple: hsl(292, 16%, 49%);
   --cl-bright-purple: hsl(281, 83%, 54%);
   --cl-dark-purple: hsl(292, 42%, 14%);
+  /* Fonts */
+  --fs-title: clamp(2rem, 1.647887323943662rem + 1.5023474178403755vw, 3rem);
+  --fs-h2: clamp(1rem, 0.9471830985915494rem + 0.22535211267605623vw, 1.15rem);
+  --fs-paragraph: clamp(
+    0.8rem,
+    0.7295774647887324rem + 0.300469483568075vw,
+    1rem
+  );
+  --w-icon: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem);
+  /* BG-Size */
+  --bg-desktop: 20rem;
+  --bg-mobile: 14.5rem;
 }
 
 body {
@@ -35,7 +47,7 @@ body {
 
 .background {
   width: 100%;
-  height: 20rem;
+  height: var(--bg-desktop);
   background-image: url(assets/images/background-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: top center;
@@ -43,7 +55,7 @@ body {
   position: absolute;
   top: 0;
   @media screen and (width < 23.44em) {
-    height: 14.5rem;
+    height: var(--bg-mobile);
     background-image: url(assets/images/background-pattern-mobile.svg);
   }
 }
@@ -52,8 +64,8 @@ body {
   --cl-shadow: hsla(293, 16%, 49%, 0.233);
 
   width: min(38rem, calc(100% - 3.5rem));
-  padding: 1rem 2.5rem;
-  margin-top: calc(20rem - 9.56rem);
+  padding: 0 2.5rem 1rem;
+  margin-top: calc(var(--bg-desktop) - 9.56rem);
   border-radius: 15px;
   background-color: var(--cl-white);
   box-shadow: 0 15px 50px 20px var(--cl-shadow);
@@ -62,26 +74,28 @@ body {
   align-items: center;
   z-index: 2;
   @media screen and (width < 23.44em) {
-    margin-top: calc(14.5rem - 6rem);
-    padding: 0.5rem 2rem;
+    margin-top: calc(var(--bg-mobile) - 6rem);
+    padding: 0 2rem 0.5rem;
     border-radius: 10px;
   }
 }
 
 .title {
   width: 100%;
-  padding-block: 2rem;
+  height: calc(10rem - 1.5rem);
+  align-content: center;
   display: flex;
+  align-items: center;
   gap: 5%;
   & h1 {
-    font-size: clamp(2rem, 1.647887323943662rem + 1.5023474178403755vw, 3rem);
+    font-size: var(--fs-title);
     color: var(--cl-dark-purple);
   }
   & .star-icon {
-    width: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem);
+    width: var(--w-icon);
   }
   @media screen and (width < 23.44em) {
-    padding-block: 1.5rem;
+    height: calc(5.75rem);
   }
 }
 
@@ -98,29 +112,6 @@ body {
   }
 }
 
-.icons {
-  width: 1.5rem;
-  cursor: pointer;
-  &:focus-visible {
-    border: 2px solid black;
-    border-radius: 10px;
-  }
-}
-
-h2 {
-  font-size: clamp(
-    1rem,
-    0.9471830985915494rem + 0.22535211267605623vw,
-    1.15rem
-  );
-  color: var(--cl-dark-purple);
-  cursor: pointer;
-  transition: color 200ms ease-in-out;
-  &:hover {
-    color: var(--cl-bright-purple);
-  }
-}
-
 .accordion {
   position: relative;
   min-width: 100%;
@@ -134,13 +125,37 @@ h2 {
   }
 }
 
+h2 {
+  font-size: var(--fs-h2);
+  color: var(--cl-dark-purple);
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+  &:hover {
+    color: var(--cl-bright-purple);
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & img {
+    width: var(--w-icon);
+    cursor: pointer;
+    &:focus-visible {
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+  }
+}
+
 .content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 300ms ease-in-out, margin-bottom 300ms ease-in-out;
   & p {
     line-height: 1.5;
-    font-size: clamp(0.8rem, 0.7295774647887324rem + 0.300469483568075vw, 1rem);
+    font-size: var(--fs-paragraph);
     text-align: left;
     color: var(--cl-light-purple);
   }
@@ -157,9 +172,7 @@ h2 {
 
 .attribution {
   width: fit-content;
-  padding: 1rem 4rem;
-  /* position: fixed;
-  bottom: 0; */
+  padding: 1rem 5rem;
   align-self: center;
   justify-self: end;
   display: flex;
@@ -168,11 +181,7 @@ h2 {
   flex-wrap: wrap;
   & p {
     text-align: center;
-    font-size: clamp(
-      0.7rem,
-      0.5943661971830986rem + 0.4507042253521127vw,
-      1rem
-    );
+    font-size: var(--fs-paragraph);
     & a {
       color: hsl(228, 45%, 44%);
       transition: color 200ms ease-in-out;
