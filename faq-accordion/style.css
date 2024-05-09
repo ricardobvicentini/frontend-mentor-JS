@@ -154,10 +154,29 @@ h2 {
   overflow: hidden;
   transition: max-height 300ms ease-in-out, margin-bottom 300ms ease-in-out;
   & p {
+    display: inline;
     line-height: 1.5;
     font-size: var(--fs-paragraph);
     text-align: left;
-    color: var(--cl-light-purple);
+    color: hsl(0 0% 100% / 0);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    background-image: linear-gradient(
+      90deg,
+      var(--cl-light-purple),
+      var(--cl-light-purple)
+    );
+    animation: conceal-text 500ms linear forwards;
+  }
+}
+
+@keyframes conceal-text {
+  from {
+    background-size: 100% 100%;
+  }
+  to {
+    background-size: 0 100%;
   }
 }
 
@@ -166,8 +185,20 @@ h2 {
 }
 
 .show {
-  max-height: 300px;
+  max-height: 20rem;
   margin-bottom: calc(1.5rem - 1px);
+  & p {
+    animation: reveal-text 500ms linear forwards;
+  }
+}
+
+@keyframes reveal-text {
+  from {
+    background-size: 0 100%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
 }
 
 .attribution {
