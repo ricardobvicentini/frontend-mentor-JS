@@ -167,7 +167,7 @@ h2 {
       var(--cl-light-purple),
       var(--cl-light-purple)
     );
-    animation: conceal-text 500ms linear forwards;
+    animation: conceal-text 500ms ease-in-out forwards;
   }
 }
 
@@ -188,7 +188,7 @@ h2 {
   max-height: 20rem;
   margin-bottom: calc(1.5rem - 1px);
   & p {
-    animation: reveal-text 500ms linear forwards;
+    animation: reveal-text 500ms ease-in-out forwards;
   }
 }
 
